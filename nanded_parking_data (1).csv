@@ -1,0 +1,1001 @@
+Date,Time,Day,Is_Weekend,Hour,Location,Total_Spots,Occupied_Spots,Available_Spots,Occupancy_Rate_%,Weather,Parking_Available
+2024-01-17,23:00,Wednesday,0,23,Vidhyanagar,200,27,173,13.82,Sunny,1
+2024-06-02,02:00,Sunday,1,2,Vazirabad,50,2,48,4.67,Rainy,1
+2024-11-06,13:00,Wednesday,0,13,Gurudwara Road,100,65,35,65.37,Sunny,1
+2024-10-17,09:00,Thursday,0,9,Shivaji Market,100,86,14,86.26,Cloudy,1
+2024-04-12,00:00,Friday,0,0,Gurudwara Road,200,30,170,15.45,Rainy,1
+2024-01-03,14:00,Wednesday,0,14,Dandapur Road,200,157,43,78.63,Rainy,1
+2024-05-25,05:00,Saturday,1,5,Shivaji Market,100,19,81,19.36,Sunny,1
+2024-11-20,04:00,Wednesday,0,4,Vazirabad,200,37,163,18.56,Rainy,1
+2024-12-08,04:00,Sunday,1,4,Shivaji Chowk,100,10,90,11.0,Sunny,1
+2024-09-20,07:00,Friday,0,7,Vidhyanagar,150,39,111,26.24,Cloudy,1
+2024-03-12,01:00,Tuesday,0,1,Naag Maidan,50,0,50,0.41,Cloudy,1
+2024-11-07,03:00,Thursday,0,3,Shivaji Chowk,50,8,42,16.24,Rainy,1
+2024-07-24,08:00,Wednesday,0,8,Shivaji Market,50,49,1,98.89,Rainy,0
+2024-12-18,19:00,Wednesday,0,19,Vazirabad,50,40,10,81.79,Rainy,0
+2024-12-25,10:00,Wednesday,0,10,Vidhyanagar,200,143,57,71.55,Sunny,1
+2024-04-20,03:00,Saturday,1,3,Dandapur Road,150,3,147,2.35,Cloudy,1
+2024-05-05,09:00,Sunday,1,9,Vidhyanagar,50,35,15,71.61,Sunny,1
+2024-11-10,06:00,Sunday,1,6,Bazar Ward,50,15,35,30.45,Cloudy,1
+2024-07-17,18:00,Wednesday,0,18,Naag Maidan,150,109,41,73.1,Rainy,1
+2024-09-22,11:00,Sunday,1,11,Shivaji Market,100,86,14,86.65,Rainy,1
+2024-04-24,11:00,Wednesday,0,11,Cidco Colony,100,81,19,81.87,Rainy,1
+2024-04-11,06:00,Thursday,0,6,Vishnupuri Colony,150,69,81,46.05,Rainy,1
+2024-05-03,07:00,Friday,0,7,Dandapur Road,100,30,70,30.23,Rainy,1
+2024-05-03,07:00,Friday,0,7,Taroda Naka,150,69,81,46.4,Rainy,1
+2024-03-03,00:00,Sunday,1,0,Dandapur Road,100,8,92,8.82,Cloudy,1
+2024-09-18,07:00,Wednesday,0,7,Taroda Naka,200,87,113,43.69,Sunny,1
+2024-08-13,04:00,Tuesday,0,4,Bazar Ward,150,14,136,9.64,Cloudy,1
+2024-12-19,20:00,Thursday,0,20,Taroda Naka,100,91,9,91.43,Sunny,0
+2024-08-15,04:00,Thursday,0,4,Bazar Ward,100,4,96,4.81,Rainy,1
+2024-09-11,13:00,Wednesday,0,13,Taroda Naka,50,27,23,55.57,Cloudy,1
+2024-03-24,17:00,Sunday,1,17,Naag Maidan,50,41,9,83.64,Sunny,0
+2024-01-03,11:00,Wednesday,0,11,Bazar Ward,50,42,8,84.03,Sunny,0
+2024-10-18,07:00,Friday,0,7,Vishnupuri Colony,100,44,56,44.48,Cloudy,1
+2024-03-07,21:00,Thursday,0,21,Shivaji Market,100,38,62,38.41,Rainy,1
+2024-12-03,07:00,Tuesday,0,7,Vazirabad,150,46,104,30.91,Rainy,1
+2024-03-28,20:00,Thursday,0,20,Dandapur Road,200,188,12,94.14,Cloudy,1
+2024-08-07,17:00,Wednesday,0,17,Bus Stand Area,50,37,13,75.35,Sunny,1
+2024-11-03,07:00,Sunday,1,7,Dandapur Road,150,71,79,47.83,Rainy,1
+2024-05-30,19:00,Thursday,0,19,Dandapur Road,100,98,2,98.79,Sunny,0
+2024-01-23,05:00,Tuesday,0,5,Cidco Colony,200,1,199,0.5,Cloudy,1
+2024-11-29,14:00,Friday,0,14,Vazirabad,50,28,22,56.22,Cloudy,1
+2024-03-21,08:00,Thursday,0,8,Gurudwara Road,150,116,34,77.96,Cloudy,1
+2024-07-29,03:00,Monday,0,3,Naag Maidan,200,38,162,19.06,Cloudy,1
+2024-09-07,08:00,Saturday,1,8,Kasturba Hospital Area,200,144,56,72.2,Cloudy,1
+2024-10-20,23:00,Sunday,1,23,Naag Maidan,200,39,161,19.67,Cloudy,1
+2024-02-14,21:00,Wednesday,0,21,Bus Stand Area,100,29,71,29.34,Sunny,1
+2024-02-07,20:00,Wednesday,0,20,Hadgaon Road,200,175,25,87.6,Sunny,1
+2024-11-27,10:00,Wednesday,0,10,Vishnupuri Colony,50,40,10,81.45,Sunny,0
+2024-03-19,14:00,Tuesday,0,14,Cidco Colony,50,30,20,61.94,Sunny,1
+2024-04-26,03:00,Friday,0,3,Vidhyanagar,100,9,91,9.23,Cloudy,1
+2024-02-22,07:00,Thursday,0,7,Vazirabad,50,11,39,22.43,Rainy,1
+2024-05-10,05:00,Friday,0,5,Bus Stand Area,150,17,133,11.58,Cloudy,1
+2024-06-10,07:00,Monday,0,7,Taroda Naka,200,86,114,43.36,Cloudy,1
+2024-04-12,21:00,Friday,0,21,Shivaji Market,200,88,112,44.33,Sunny,1
+2024-01-02,05:00,Tuesday,0,5,Kasturba Hospital Area,200,6,194,3.43,Sunny,1
+2024-01-28,17:00,Sunday,1,17,Cidco Colony,200,182,18,91.48,Sunny,1
+2024-10-29,10:00,Tuesday,0,10,Railway Station Road,150,126,24,84.4,Rainy,1
+2024-06-22,20:00,Saturday,1,20,Railway Station Road,200,179,21,89.82,Rainy,1
+2024-04-23,00:00,Tuesday,0,0,Bazar Ward,50,9,41,18.35,Rainy,1
+2024-12-06,08:00,Friday,0,8,Cidco Colony,200,159,41,79.65,Rainy,1
+2024-05-28,12:00,Tuesday,0,12,Kasturba Hospital Area,150,117,33,78.6,Rainy,1
+2024-09-13,05:00,Friday,0,5,Gurudwara Road,200,1,199,0.64,Rainy,1
+2024-12-12,12:00,Thursday,0,12,Vazirabad,200,110,90,55.34,Rainy,1
+2024-03-01,11:00,Friday,0,11,Vidhyanagar,200,186,14,93.34,Cloudy,1
+2024-12-14,11:00,Saturday,1,11,Dandapur Road,200,182,18,91.07,Rainy,1
+2024-08-22,03:00,Thursday,0,3,Dandapur Road,200,0,200,0.34,Rainy,1
+2024-08-03,09:00,Saturday,1,9,Vidhyanagar,150,106,44,70.96,Rainy,1
+2024-03-15,21:00,Friday,0,21,Gurudwara Road,50,15,35,31.91,Rainy,1
+2024-09-24,16:00,Tuesday,0,16,Vidhyanagar,200,122,78,61.14,Rainy,1
+2024-11-11,08:00,Monday,0,8,Hadgaon Road,150,117,33,78.29,Sunny,1
+2024-06-26,07:00,Wednesday,0,7,Hadgaon Road,50,15,35,31.59,Rainy,1
+2024-12-23,18:00,Monday,0,18,Taroda Naka,200,165,35,82.77,Sunny,1
+2024-07-27,02:00,Saturday,1,2,Shivaji Chowk,200,12,188,6.1,Rainy,1
+2024-07-26,16:00,Friday,0,16,Bus Stand Area,150,77,73,51.98,Rainy,1
+2024-08-30,08:00,Friday,0,8,Vazirabad,100,86,14,86.31,Rainy,1
+2024-05-20,12:00,Monday,0,12,Shivaji Market,50,35,15,70.46,Cloudy,1
+2024-01-30,02:00,Tuesday,0,2,Cidco Colony,150,22,128,15.24,Rainy,1
+2024-04-05,05:00,Friday,0,5,Vishnupuri Colony,50,1,49,3.79,Sunny,1
+2024-07-31,16:00,Wednesday,0,16,Vishnupuri Colony,50,31,19,62.28,Rainy,1
+2024-04-30,06:00,Tuesday,0,6,Bus Stand Area,200,49,151,24.76,Cloudy,1
+2024-03-06,03:00,Wednesday,0,3,Vidhyanagar,150,10,140,7.1,Cloudy,1
+2024-01-29,05:00,Monday,0,5,Railway Station Road,100,15,85,15.87,Sunny,1
+2024-05-02,10:00,Thursday,0,10,Shivaji Market,100,89,11,89.75,Cloudy,1
+2024-08-08,17:00,Thursday,0,17,Bazar Ward,200,192,8,96.22,Rainy,0
+2024-12-28,08:00,Saturday,1,8,Taroda Naka,150,123,27,82.44,Sunny,1
+2024-04-11,01:00,Thursday,0,1,Vishnupuri Colony,100,17,83,17.58,Rainy,1
+2024-11-29,15:00,Friday,0,15,Kasturba Hospital Area,50,33,17,66.36,Rainy,1
+2024-09-03,18:00,Tuesday,0,18,Taroda Naka,200,193,7,96.66,Rainy,0
+2024-08-15,20:00,Thursday,0,20,Vazirabad,200,199,1,99.93,Sunny,0
+2024-07-01,08:00,Monday,0,8,Taroda Naka,200,174,26,87.27,Cloudy,1
+2024-12-28,01:00,Saturday,1,1,Vidhyanagar,100,0,100,0.27,Cloudy,1
+2024-08-10,16:00,Saturday,1,16,Gurudwara Road,50,27,23,55.75,Sunny,1
+2024-09-23,23:00,Monday,0,23,Hadgaon Road,50,4,46,8.81,Sunny,1
+2024-10-17,10:00,Thursday,0,10,Bus Stand Area,200,160,40,80.28,Sunny,1
+2024-09-21,05:00,Saturday,1,5,Vidhyanagar,150,13,137,9.09,Cloudy,1
+2024-11-20,14:00,Wednesday,0,14,Naag Maidan,50,38,12,77.13,Cloudy,1
+2024-07-06,01:00,Saturday,1,1,Shivaji Chowk,50,4,46,8.44,Rainy,1
+2024-07-21,19:00,Sunday,1,19,Shivaji Market,100,87,13,87.74,Sunny,1
+2024-02-06,18:00,Tuesday,0,18,Vishnupuri Colony,200,192,8,96.37,Sunny,0
+2024-07-14,23:00,Sunday,1,23,Vazirabad,200,18,182,9.26,Sunny,1
+2024-06-12,04:00,Wednesday,0,4,Bazar Ward,150,20,130,13.56,Sunny,1
+2024-02-19,18:00,Monday,0,18,Hadgaon Road,100,91,9,91.5,Cloudy,0
+2024-02-29,06:00,Thursday,0,6,Dandapur Road,100,44,56,44.25,Rainy,1
+2024-02-07,08:00,Wednesday,0,8,Bazar Ward,150,142,8,95.07,Cloudy,0
+2024-06-26,15:00,Wednesday,0,15,Shivaji Market,100,56,44,56.65,Rainy,1
+2024-05-27,20:00,Monday,0,20,Taroda Naka,50,42,8,85.34,Rainy,0
+2024-06-21,16:00,Friday,0,16,Shivaji Market,200,116,84,58.13,Rainy,1
+2024-05-31,05:00,Friday,0,5,Taroda Naka,200,33,167,16.64,Rainy,1
+2024-08-10,02:00,Saturday,1,2,Naag Maidan,200,26,174,13.04,Cloudy,1
+2024-12-06,15:00,Friday,0,15,Shivaji Market,50,37,13,74.88,Rainy,1
+2024-07-25,03:00,Thursday,0,3,Vazirabad,200,29,171,14.71,Rainy,1
+2024-11-12,05:00,Tuesday,0,5,Taroda Naka,150,5,145,3.84,Sunny,1
+2024-09-08,11:00,Sunday,1,11,Vazirabad,200,148,52,74.17,Rainy,1
+2024-07-15,16:00,Monday,0,16,Taroda Naka,200,124,76,62.02,Cloudy,1
+2024-05-03,09:00,Friday,0,9,Shivaji Market,50,38,12,77.95,Cloudy,1
+2024-07-20,04:00,Saturday,1,4,Dandapur Road,100,5,95,5.25,Cloudy,1
+2024-03-11,22:00,Monday,0,22,Vishnupuri Colony,50,20,30,41.58,Rainy,1
+2024-12-10,14:00,Tuesday,0,14,Bazar Ward,50,37,13,75.82,Rainy,1
+2024-06-30,06:00,Sunday,1,6,Cidco Colony,200,55,145,27.63,Cloudy,1
+2024-03-09,03:00,Saturday,1,3,Taroda Naka,50,7,43,15.3,Sunny,1
+2024-07-27,18:00,Saturday,1,18,Vidhyanagar,50,47,3,95.27,Cloudy,0
+2024-08-16,17:00,Friday,0,17,Vishnupuri Colony,150,127,23,85.21,Sunny,1
+2024-11-13,04:00,Wednesday,0,4,Naag Maidan,150,5,145,3.76,Sunny,1
+2024-05-10,04:00,Friday,0,4,Naag Maidan,50,4,46,8.93,Rainy,1
+2024-03-06,08:00,Wednesday,0,8,Gurudwara Road,100,82,18,82.36,Cloudy,1
+2024-02-05,00:00,Monday,0,0,Vazirabad,150,19,131,12.85,Cloudy,1
+2024-05-22,02:00,Wednesday,0,2,Railway Station Road,150,7,143,5.23,Sunny,1
+2024-11-17,03:00,Sunday,1,3,Shivaji Chowk,150,11,139,7.51,Cloudy,1
+2024-08-07,12:00,Wednesday,0,12,Vishnupuri Colony,50,35,15,70.09,Cloudy,1
+2024-07-11,06:00,Thursday,0,6,Vishnupuri Colony,100,36,64,36.74,Sunny,1
+2024-08-21,02:00,Wednesday,0,2,Vishnupuri Colony,50,9,41,19.16,Sunny,1
+2024-03-17,14:00,Sunday,1,14,Taroda Naka,50,27,23,56.0,Rainy,1
+2024-03-31,12:00,Sunday,1,12,Bus Stand Area,100,76,24,76.91,Rainy,1
+2024-04-17,14:00,Wednesday,0,14,Naag Maidan,150,107,43,71.68,Cloudy,1
+2024-01-12,10:00,Friday,0,10,Railway Station Road,100,98,2,98.9,Sunny,0
+2024-09-21,01:00,Saturday,1,1,Gurudwara Road,50,0,50,0.28,Rainy,1
+2024-01-06,16:00,Saturday,1,16,Naag Maidan,100,54,46,54.46,Rainy,1
+2024-06-28,05:00,Friday,0,5,Shivaji Market,100,18,82,18.8,Cloudy,1
+2024-03-17,18:00,Sunday,1,18,Kasturba Hospital Area,150,136,14,90.86,Sunny,1
+2024-08-09,17:00,Friday,0,17,Railway Station Road,200,193,7,96.63,Rainy,0
+2024-07-31,23:00,Wednesday,0,23,Railway Station Road,100,13,87,13.54,Sunny,1
+2024-12-27,13:00,Friday,0,13,Hadgaon Road,100,69,31,69.54,Sunny,1
+2024-01-16,13:00,Tuesday,0,13,Kasturba Hospital Area,200,159,41,79.55,Rainy,1
+2024-02-04,04:00,Sunday,1,4,Kasturba Hospital Area,100,6,94,6.99,Sunny,1
+2024-01-15,14:00,Monday,0,14,Dandapur Road,100,67,33,67.22,Rainy,1
+2024-10-07,21:00,Monday,0,21,Shivaji Chowk,50,12,38,24.17,Rainy,1
+2024-05-15,17:00,Wednesday,0,17,Railway Station Road,50,39,11,79.37,Rainy,1
+2024-07-10,00:00,Wednesday,0,0,Bazar Ward,100,11,89,11.64,Cloudy,1
+2024-03-21,17:00,Thursday,0,17,Naag Maidan,50,45,5,91.19,Cloudy,0
+2024-12-12,04:00,Thursday,0,4,Naag Maidan,100,2,98,2.31,Rainy,1
+2024-05-23,16:00,Thursday,0,16,Kasturba Hospital Area,50,39,11,78.13,Sunny,1
+2024-11-04,10:00,Monday,0,10,Vazirabad,150,105,45,70.21,Sunny,1
+2024-11-05,07:00,Tuesday,0,7,Shivaji Chowk,50,15,35,31.82,Rainy,1
+2024-03-15,09:00,Friday,0,9,Bus Stand Area,50,47,3,95.47,Cloudy,0
+2024-01-10,15:00,Wednesday,0,15,Vazirabad,100,70,30,70.27,Rainy,1
+2024-06-13,22:00,Thursday,0,22,Railway Station Road,100,39,61,39.27,Cloudy,1
+2024-12-04,15:00,Wednesday,0,15,Taroda Naka,200,130,70,65.34,Sunny,1
+2024-12-12,19:00,Thursday,0,19,Gurudwara Road,200,191,9,95.78,Cloudy,0
+2024-03-08,18:00,Friday,0,18,Vidhyanagar,150,133,17,88.71,Sunny,1
+2024-02-14,19:00,Wednesday,0,19,Vishnupuri Colony,200,166,34,83.06,Cloudy,1
+2024-08-25,01:00,Sunday,1,1,Shivaji Market,50,1,49,3.54,Cloudy,1
+2024-01-10,09:00,Wednesday,0,9,Dandapur Road,50,41,9,83.31,Cloudy,0
+2024-05-30,01:00,Thursday,0,1,Hadgaon Road,100,1,99,1.08,Cloudy,1
+2024-09-12,06:00,Thursday,0,6,Bus Stand Area,50,13,37,26.95,Cloudy,1
+2024-07-20,20:00,Saturday,1,20,Naag Maidan,50,45,5,91.87,Rainy,0
+2024-08-06,05:00,Tuesday,0,5,Bus Stand Area,200,25,175,12.66,Cloudy,1
+2024-07-29,06:00,Monday,0,6,Kasturba Hospital Area,50,22,28,44.17,Cloudy,1
+2024-11-19,20:00,Tuesday,0,20,Dandapur Road,100,88,12,88.5,Rainy,1
+2024-08-13,02:00,Tuesday,0,2,Naag Maidan,50,5,45,11.09,Rainy,1
+2024-02-16,06:00,Friday,0,6,Vazirabad,200,77,123,38.69,Rainy,1
+2024-12-09,13:00,Monday,0,13,Vidhyanagar,200,102,98,51.39,Cloudy,1
+2024-12-04,06:00,Wednesday,0,6,Taroda Naka,200,57,143,28.85,Rainy,1
+2024-04-20,05:00,Saturday,1,5,Bus Stand Area,100,3,97,3.03,Rainy,1
+2024-07-04,03:00,Thursday,0,3,Cidco Colony,150,22,128,14.88,Rainy,1
+2024-07-24,17:00,Wednesday,0,17,Bazar Ward,150,132,18,88.1,Sunny,1
+2024-02-02,11:00,Friday,0,11,Shivaji Market,50,39,11,79.84,Cloudy,1
+2024-11-29,01:00,Friday,0,1,Naag Maidan,200,8,192,4.47,Sunny,1
+2024-09-10,15:00,Tuesday,0,15,Kasturba Hospital Area,100,50,50,50.7,Sunny,1
+2024-07-06,20:00,Saturday,1,20,Gurudwara Road,150,122,28,81.99,Cloudy,1
+2024-04-29,00:00,Monday,0,0,Taroda Naka,200,29,171,14.83,Sunny,1
+2024-04-13,01:00,Saturday,1,1,Hadgaon Road,150,1,149,1.33,Cloudy,1
+2024-10-23,04:00,Wednesday,0,4,Kasturba Hospital Area,100,7,93,7.64,Sunny,1
+2024-07-31,22:00,Wednesday,0,22,Shivaji Chowk,100,25,75,25.58,Cloudy,1
+2024-07-30,19:00,Tuesday,0,19,Shivaji Chowk,100,96,4,96.27,Sunny,0
+2024-04-09,16:00,Tuesday,0,16,Vishnupuri Colony,100,66,34,66.24,Rainy,1
+2024-08-03,17:00,Saturday,1,17,Vazirabad,200,197,3,98.95,Rainy,0
+2024-08-13,03:00,Tuesday,0,3,Dandapur Road,100,13,87,13.65,Sunny,1
+2024-03-07,11:00,Thursday,0,11,Vazirabad,200,148,52,74.45,Cloudy,1
+2024-02-20,17:00,Tuesday,0,17,Shivaji Chowk,150,143,7,95.38,Rainy,0
+2024-03-23,21:00,Saturday,1,21,Vidhyanagar,150,49,101,32.8,Cloudy,1
+2024-06-29,19:00,Saturday,1,19,Vishnupuri Colony,50,41,9,83.06,Sunny,0
+2024-12-19,02:00,Thursday,0,2,Taroda Naka,150,18,132,12.33,Sunny,1
+2024-09-01,12:00,Sunday,1,12,Taroda Naka,100,53,47,53.03,Cloudy,1
+2024-04-10,06:00,Wednesday,0,6,Vazirabad,200,87,113,43.82,Cloudy,1
+2024-05-28,11:00,Tuesday,0,11,Hadgaon Road,100,70,30,71.0,Cloudy,1
+2024-12-14,02:00,Saturday,1,2,Hadgaon Road,150,7,143,4.85,Rainy,1
+2024-06-10,15:00,Monday,0,15,Naag Maidan,200,105,95,52.96,Rainy,1
+2024-07-14,21:00,Sunday,1,21,Vazirabad,100,48,52,48.82,Cloudy,1
+2024-09-19,05:00,Thursday,0,5,Gurudwara Road,50,0,50,1.09,Cloudy,1
+2024-04-14,00:00,Sunday,1,0,Bazar Ward,150,6,144,4.46,Cloudy,1
+2024-12-17,04:00,Tuesday,0,4,Gurudwara Road,50,4,46,9.27,Rainy,1
+2024-07-29,08:00,Monday,0,8,Bazar Ward,100,73,27,73.08,Rainy,1
+2024-05-28,09:00,Tuesday,0,9,Cidco Colony,100,96,4,96.26,Sunny,0
+2024-02-03,08:00,Saturday,1,8,Shivaji Chowk,50,42,8,84.22,Sunny,0
+2024-12-12,02:00,Thursday,0,2,Gurudwara Road,50,7,43,15.06,Rainy,1
+2024-02-20,12:00,Tuesday,0,12,Taroda Naka,100,63,37,63.85,Rainy,1
+2024-03-12,12:00,Tuesday,0,12,Shivaji Market,50,25,25,50.02,Sunny,1
+2024-12-26,06:00,Thursday,0,6,Taroda Naka,150,54,96,36.56,Rainy,1
+2024-12-12,07:00,Thursday,0,7,Bus Stand Area,150,30,120,20.26,Rainy,1
+2024-12-05,17:00,Thursday,0,17,Shivaji Market,50,43,7,86.86,Rainy,0
+2024-04-23,16:00,Tuesday,0,16,Hadgaon Road,150,83,67,55.52,Cloudy,1
+2024-01-06,19:00,Saturday,1,19,Railway Station Road,200,186,14,93.36,Cloudy,1
+2024-11-18,06:00,Monday,0,6,Cidco Colony,100,35,65,35.89,Cloudy,1
+2024-12-27,22:00,Friday,0,22,Vazirabad,200,71,129,35.81,Cloudy,1
+2024-12-22,23:00,Sunday,1,23,Kasturba Hospital Area,100,15,85,15.59,Rainy,1
+2024-01-13,22:00,Saturday,1,22,Cidco Colony,200,98,102,49.05,Rainy,1
+2024-09-30,02:00,Monday,0,2,Bus Stand Area,100,16,84,16.16,Rainy,1
+2024-09-12,23:00,Thursday,0,23,Shivaji Market,200,38,162,19.22,Cloudy,1
+2024-08-29,10:00,Thursday,0,10,Vishnupuri Colony,100,70,30,70.93,Rainy,1
+2024-03-18,20:00,Monday,0,20,Gurudwara Road,100,76,24,76.36,Rainy,1
+2024-03-01,18:00,Friday,0,18,Bazar Ward,150,141,9,94.4,Rainy,0
+2024-05-29,04:00,Wednesday,0,4,Vazirabad,150,16,134,10.77,Sunny,1
+2024-07-11,12:00,Thursday,0,12,Vazirabad,100,69,31,69.08,Cloudy,1
+2024-06-07,07:00,Friday,0,7,Naag Maidan,50,12,38,24.04,Cloudy,1
+2024-02-26,01:00,Monday,0,1,Dandapur Road,50,8,42,16.67,Sunny,1
+2024-04-19,17:00,Friday,0,17,Hadgaon Road,100,93,7,93.87,Cloudy,0
+2024-02-25,21:00,Sunday,1,21,Kasturba Hospital Area,200,67,133,33.75,Cloudy,1
+2024-02-15,15:00,Thursday,0,15,Shivaji Market,100,63,37,63.65,Cloudy,1
+2024-10-27,15:00,Sunday,1,15,Shivaji Chowk,150,103,47,69.03,Cloudy,1
+2024-07-22,08:00,Monday,0,8,Naag Maidan,150,109,41,73.08,Cloudy,1
+2024-04-19,02:00,Friday,0,2,Taroda Naka,150,13,137,8.85,Sunny,1
+2024-03-27,13:00,Wednesday,0,13,Gurudwara Road,150,79,71,53.28,Cloudy,1
+2024-01-31,05:00,Wednesday,0,5,Hadgaon Road,100,10,90,10.96,Rainy,1
+2024-12-09,07:00,Monday,0,7,Vidhyanagar,50,23,27,47.33,Rainy,1
+2024-01-09,05:00,Tuesday,0,5,Taroda Naka,100,6,94,6.93,Sunny,1
+2024-09-30,18:00,Monday,0,18,Railway Station Road,200,199,1,99.53,Cloudy,0
+2024-04-01,16:00,Monday,0,16,Shivaji Chowk,50,26,24,52.76,Cloudy,1
+2024-11-12,02:00,Tuesday,0,2,Dandapur Road,200,26,174,13.22,Cloudy,1
+2024-12-16,07:00,Monday,0,7,Vishnupuri Colony,150,58,92,39.16,Rainy,1
+2024-12-11,14:00,Wednesday,0,14,Bazar Ward,100,54,46,54.92,Sunny,1
+2024-02-24,18:00,Saturday,1,18,Shivaji Chowk,150,120,30,80.1,Rainy,1
+2024-07-23,07:00,Tuesday,0,7,Kasturba Hospital Area,200,80,120,40.21,Sunny,1
+2024-07-16,14:00,Tuesday,0,14,Taroda Naka,200,132,68,66.47,Sunny,1
+2024-02-22,12:00,Thursday,0,12,Vidhyanagar,100,71,29,71.73,Sunny,1
+2024-05-09,17:00,Thursday,0,17,Taroda Naka,200,149,51,74.56,Sunny,1
+2024-01-14,22:00,Sunday,1,22,Vishnupuri Colony,200,73,127,36.51,Sunny,1
+2024-07-12,11:00,Friday,0,11,Shivaji Market,50,36,14,73.02,Rainy,1
+2024-01-31,01:00,Wednesday,0,1,Shivaji Market,100,4,96,4.8,Rainy,1
+2024-07-24,22:00,Wednesday,0,22,Kasturba Hospital Area,50,20,30,41.49,Rainy,1
+2024-11-16,03:00,Saturday,1,3,Bus Stand Area,150,17,133,11.45,Cloudy,1
+2024-02-08,18:00,Thursday,0,18,Shivaji Chowk,150,139,11,92.76,Rainy,1
+2024-08-04,15:00,Sunday,1,15,Kasturba Hospital Area,50,31,19,63.8,Sunny,1
+2024-10-17,12:00,Thursday,0,12,Shivaji Chowk,50,29,21,59.06,Cloudy,1
+2024-12-20,15:00,Friday,0,15,Vazirabad,100,75,25,75.26,Cloudy,1
+2024-02-28,06:00,Wednesday,0,6,Gurudwara Road,50,19,31,38.29,Rainy,1
+2024-09-07,17:00,Saturday,1,17,Dandapur Road,150,124,26,83.01,Rainy,1
+2024-06-08,06:00,Saturday,1,6,Vidhyanagar,200,90,110,45.43,Cloudy,1
+2024-05-19,16:00,Sunday,1,16,Railway Station Road,50,31,19,62.68,Rainy,1
+2024-05-02,20:00,Thursday,0,20,Shivaji Market,150,113,37,75.48,Sunny,1
+2024-11-16,10:00,Saturday,1,10,Hadgaon Road,150,145,5,96.7,Sunny,0
+2024-04-11,01:00,Thursday,0,1,Bus Stand Area,100,2,98,2.72,Sunny,1
+2024-06-28,07:00,Friday,0,7,Taroda Naka,100,20,80,20.64,Sunny,1
+2024-09-03,03:00,Tuesday,0,3,Dandapur Road,100,7,93,7.76,Sunny,1
+2024-01-09,18:00,Tuesday,0,18,Vidhyanagar,100,80,20,80.85,Cloudy,1
+2024-10-07,16:00,Monday,0,16,Taroda Naka,50,31,19,62.54,Sunny,1
+2024-02-05,01:00,Monday,0,1,Vidhyanagar,100,18,82,18.67,Rainy,1
+2024-12-01,19:00,Sunday,1,19,Shivaji Chowk,150,118,32,78.73,Sunny,1
+2024-02-11,07:00,Sunday,1,7,Dandapur Road,200,56,144,28.29,Cloudy,1
+2024-05-22,13:00,Wednesday,0,13,Gurudwara Road,200,118,82,59.1,Rainy,1
+2024-01-11,03:00,Thursday,0,3,Railway Station Road,100,0,100,0.16,Rainy,1
+2024-04-01,02:00,Monday,0,2,Naag Maidan,200,17,183,8.7,Sunny,1
+2024-04-18,01:00,Thursday,0,1,Vishnupuri Colony,150,23,127,15.68,Cloudy,1
+2024-07-07,18:00,Sunday,1,18,Shivaji Market,200,152,48,76.04,Cloudy,1
+2024-05-01,08:00,Wednesday,0,8,Vidhyanagar,200,190,10,95.13,Rainy,0
+2024-01-31,19:00,Wednesday,0,19,Bazar Ward,200,163,37,81.8,Cloudy,1
+2024-08-01,14:00,Thursday,0,14,Vishnupuri Colony,200,139,61,69.58,Rainy,1
+2024-08-09,10:00,Friday,0,10,Bazar Ward,150,120,30,80.27,Rainy,1
+2024-08-14,12:00,Wednesday,0,12,Vazirabad,50,34,16,68.64,Rainy,1
+2024-07-17,18:00,Wednesday,0,18,Naag Maidan,100,98,2,98.88,Rainy,0
+2024-11-18,13:00,Monday,0,13,Gurudwara Road,50,38,12,77.62,Rainy,1
+2024-05-23,23:00,Thursday,0,23,Vazirabad,150,16,134,10.84,Rainy,1
+2024-01-08,05:00,Monday,0,5,Railway Station Road,50,4,46,8.32,Rainy,1
+2024-05-23,10:00,Thursday,0,10,Railway Station Road,50,45,5,90.79,Sunny,0
+2024-05-19,02:00,Sunday,1,2,Bazar Ward,150,18,132,12.16,Sunny,1
+2024-01-29,01:00,Monday,0,1,Dandapur Road,100,12,88,12.23,Rainy,1
+2024-02-09,15:00,Friday,0,15,Gurudwara Road,200,130,70,65.42,Sunny,1
+2024-12-10,22:00,Tuesday,0,22,Railway Station Road,200,42,158,21.49,Cloudy,1
+2024-04-27,08:00,Saturday,1,8,Taroda Naka,200,186,14,93.08,Cloudy,1
+2024-06-10,07:00,Monday,0,7,Hadgaon Road,50,19,31,39.19,Cloudy,1
+2024-12-17,08:00,Tuesday,0,8,Vazirabad,200,177,23,88.67,Sunny,1
+2024-05-13,15:00,Monday,0,15,Cidco Colony,50,26,24,53.44,Cloudy,1
+2024-01-02,16:00,Tuesday,0,16,Kasturba Hospital Area,100,57,43,57.06,Sunny,1
+2024-02-14,12:00,Wednesday,0,12,Railway Station Road,200,101,99,50.76,Cloudy,1
+2024-03-02,11:00,Saturday,1,11,Railway Station Road,200,175,25,87.72,Rainy,1
+2024-05-05,09:00,Sunday,1,9,Shivaji Chowk,50,36,14,72.43,Rainy,1
+2024-10-07,05:00,Monday,0,5,Taroda Naka,100,19,81,19.91,Sunny,1
+2024-05-11,03:00,Saturday,1,3,Taroda Naka,50,5,45,11.98,Rainy,1
+2024-09-17,04:00,Tuesday,0,4,Hadgaon Road,100,17,83,17.75,Cloudy,1
+2024-05-11,23:00,Saturday,1,23,Hadgaon Road,50,7,43,14.28,Rainy,1
+2024-04-03,12:00,Wednesday,0,12,Dandapur Road,200,152,48,76.07,Cloudy,1
+2024-02-27,18:00,Tuesday,0,18,Vidhyanagar,150,117,33,78.62,Sunny,1
+2024-10-04,05:00,Friday,0,5,Cidco Colony,100,11,89,11.61,Sunny,1
+2024-04-28,04:00,Sunday,1,4,Vidhyanagar,50,3,47,6.33,Cloudy,1
+2024-08-24,01:00,Saturday,1,1,Bazar Ward,150,12,138,8.28,Sunny,1
+2024-11-28,14:00,Thursday,0,14,Hadgaon Road,150,100,50,67.09,Sunny,1
+2024-11-03,04:00,Sunday,1,4,Vishnupuri Colony,100,19,81,19.59,Cloudy,1
+2024-01-23,06:00,Tuesday,0,6,Taroda Naka,50,23,27,47.02,Rainy,1
+2024-04-02,02:00,Tuesday,0,2,Hadgaon Road,150,12,138,8.17,Rainy,1
+2024-10-26,04:00,Saturday,1,4,Naag Maidan,100,11,89,11.39,Sunny,1
+2024-07-27,21:00,Saturday,1,21,Dandapur Road,50,18,32,37.94,Rainy,1
+2024-08-19,04:00,Monday,0,4,Bazar Ward,200,34,166,17.48,Rainy,1
+2024-11-12,01:00,Tuesday,0,1,Hadgaon Road,150,3,147,2.15,Cloudy,1
+2024-03-10,18:00,Sunday,1,18,Shivaji Chowk,150,130,20,86.68,Sunny,1
+2024-11-22,03:00,Friday,0,3,Dandapur Road,50,7,43,15.8,Sunny,1
+2024-04-30,12:00,Tuesday,0,12,Vazirabad,100,63,37,63.61,Rainy,1
+2024-10-02,10:00,Wednesday,0,10,Vishnupuri Colony,50,38,12,76.79,Sunny,1
+2024-11-24,20:00,Sunday,1,20,Cidco Colony,150,148,2,99.1,Rainy,0
+2024-04-24,20:00,Wednesday,0,20,Shivaji Market,200,185,15,92.63,Cloudy,1
+2024-11-22,13:00,Friday,0,13,Vidhyanagar,150,84,66,56.25,Cloudy,1
+2024-11-08,19:00,Friday,0,19,Railway Station Road,200,178,22,89.34,Cloudy,1
+2024-12-01,18:00,Sunday,1,18,Shivaji Chowk,50,49,1,99.7,Rainy,0
+2024-04-17,18:00,Wednesday,0,18,Kasturba Hospital Area,150,135,15,90.52,Cloudy,1
+2024-07-11,22:00,Thursday,0,22,Cidco Colony,100,20,80,20.09,Cloudy,1
+2024-06-18,18:00,Tuesday,0,18,Vazirabad,150,121,29,81.04,Cloudy,1
+2024-09-02,06:00,Monday,0,6,Vidhyanagar,150,48,102,32.22,Cloudy,1
+2024-02-11,15:00,Sunday,1,15,Gurudwara Road,100,78,22,78.35,Sunny,1
+2024-08-21,09:00,Wednesday,0,9,Dandapur Road,200,145,55,72.92,Rainy,1
+2024-11-11,00:00,Monday,0,0,Cidco Colony,150,29,121,19.97,Rainy,1
+2024-05-05,23:00,Sunday,1,23,Naag Maidan,100,3,97,3.13,Sunny,1
+2024-11-18,00:00,Monday,0,0,Taroda Naka,200,35,165,17.94,Rainy,1
+2024-06-02,07:00,Sunday,1,7,Cidco Colony,50,13,37,27.22,Rainy,1
+2024-12-08,04:00,Sunday,1,4,Taroda Naka,50,9,41,19.02,Cloudy,1
+2024-10-19,03:00,Saturday,1,3,Dandapur Road,50,6,44,12.64,Sunny,1
+2024-05-18,23:00,Saturday,1,23,Railway Station Road,100,10,90,10.38,Cloudy,1
+2024-09-23,04:00,Monday,0,4,Shivaji Chowk,200,25,175,12.92,Sunny,1
+2024-05-20,08:00,Monday,0,8,Bazar Ward,100,76,24,76.83,Cloudy,1
+2024-10-21,19:00,Monday,0,19,Taroda Naka,100,70,30,70.26,Sunny,1
+2024-01-23,05:00,Tuesday,0,5,Bazar Ward,200,32,168,16.31,Sunny,1
+2024-09-13,23:00,Friday,0,23,Vishnupuri Colony,100,5,95,5.41,Rainy,1
+2024-04-25,16:00,Thursday,0,16,Hadgaon Road,50,33,17,67.57,Sunny,1
+2024-11-27,22:00,Wednesday,0,22,Naag Maidan,200,69,131,34.72,Sunny,1
+2024-01-08,21:00,Monday,0,21,Taroda Naka,200,86,114,43.13,Sunny,1
+2024-11-08,12:00,Friday,0,12,Shivaji Chowk,100,59,41,59.42,Cloudy,1
+2024-07-11,06:00,Thursday,0,6,Hadgaon Road,150,52,98,34.75,Rainy,1
+2024-06-12,03:00,Wednesday,0,3,Naag Maidan,200,5,195,2.85,Cloudy,1
+2024-03-19,15:00,Tuesday,0,15,Cidco Colony,50,36,14,72.99,Rainy,1
+2024-05-13,11:00,Monday,0,11,Cidco Colony,200,156,44,78.45,Rainy,1
+2024-08-05,01:00,Monday,0,1,Taroda Naka,200,3,197,1.95,Sunny,1
+2024-02-15,01:00,Thursday,0,1,Kasturba Hospital Area,100,17,83,17.81,Cloudy,1
+2024-05-18,20:00,Saturday,1,20,Bazar Ward,200,161,39,80.95,Cloudy,1
+2024-11-21,12:00,Thursday,0,12,Cidco Colony,150,118,32,79.25,Cloudy,1
+2024-05-06,20:00,Monday,0,20,Vidhyanagar,100,98,2,98.39,Rainy,0
+2024-09-16,13:00,Monday,0,13,Vidhyanagar,200,104,96,52.42,Sunny,1
+2024-03-21,02:00,Thursday,0,2,Dandapur Road,50,4,46,9.27,Sunny,1
+2024-06-04,03:00,Tuesday,0,3,Vishnupuri Colony,150,17,133,11.8,Sunny,1
+2024-11-07,15:00,Thursday,0,15,Vazirabad,50,28,22,57.6,Rainy,1
+2024-09-17,18:00,Tuesday,0,18,Bazar Ward,100,92,8,92.07,Cloudy,0
+2024-03-10,10:00,Sunday,1,10,Dandapur Road,150,142,8,94.69,Rainy,0
+2024-01-21,08:00,Sunday,1,8,Hadgaon Road,150,134,16,89.85,Rainy,1
+2024-09-08,14:00,Sunday,1,14,Kasturba Hospital Area,200,147,53,73.8,Sunny,1
+2024-10-08,22:00,Tuesday,0,22,Shivaji Market,200,86,114,43.2,Rainy,1
+2024-05-05,16:00,Sunday,1,16,Hadgaon Road,50,31,19,62.65,Sunny,1
+2024-07-23,20:00,Tuesday,0,20,Railway Station Road,100,91,9,91.67,Rainy,0
+2024-07-19,04:00,Friday,0,4,Vishnupuri Colony,200,32,168,16.04,Rainy,1
+2024-01-24,08:00,Wednesday,0,8,Vidhyanagar,200,147,53,73.8,Rainy,1
+2024-10-10,19:00,Thursday,0,19,Cidco Colony,150,126,24,84.47,Cloudy,1
+2024-11-17,03:00,Sunday,1,3,Bus Stand Area,100,17,83,17.31,Rainy,1
+2024-01-05,11:00,Friday,0,11,Railway Station Road,200,187,13,93.65,Cloudy,1
+2024-01-17,09:00,Wednesday,0,9,Hadgaon Road,100,71,29,71.55,Rainy,1
+2024-06-10,14:00,Monday,0,14,Bazar Ward,50,27,23,55.67,Cloudy,1
+2024-05-14,14:00,Tuesday,0,14,Bazar Ward,100,67,33,67.44,Rainy,1
+2024-09-09,04:00,Monday,0,4,Naag Maidan,50,8,42,17.93,Rainy,1
+2024-08-19,05:00,Monday,0,5,Vishnupuri Colony,100,15,85,15.67,Cloudy,1
+2024-06-02,17:00,Sunday,1,17,Cidco Colony,150,145,5,96.76,Sunny,0
+2024-03-24,15:00,Sunday,1,15,Railway Station Road,200,159,41,79.71,Cloudy,1
+2024-09-14,23:00,Saturday,1,23,Vishnupuri Colony,200,5,195,2.67,Rainy,1
+2024-12-27,19:00,Friday,0,19,Cidco Colony,100,99,1,99.84,Rainy,0
+2024-10-30,17:00,Wednesday,0,17,Kasturba Hospital Area,200,152,48,76.45,Cloudy,1
+2024-02-07,08:00,Wednesday,0,8,Naag Maidan,200,156,44,78.38,Cloudy,1
+2024-07-27,00:00,Saturday,1,0,Shivaji Chowk,100,6,94,6.92,Sunny,1
+2024-05-02,01:00,Thursday,0,1,Taroda Naka,150,18,132,12.4,Rainy,1
+2024-09-27,10:00,Friday,0,10,Vishnupuri Colony,150,137,13,91.88,Sunny,1
+2024-03-02,12:00,Saturday,1,12,Bazar Ward,200,101,99,50.6,Cloudy,1
+2024-11-21,11:00,Thursday,0,11,Kasturba Hospital Area,50,40,10,81.1,Rainy,0
+2024-04-01,08:00,Monday,0,8,Shivaji Chowk,50,39,11,79.76,Rainy,1
+2024-03-27,12:00,Wednesday,0,12,Bus Stand Area,200,141,59,70.78,Sunny,1
+2024-01-05,00:00,Friday,0,0,Kasturba Hospital Area,200,1,199,0.9,Sunny,1
+2024-02-28,01:00,Wednesday,0,1,Dandapur Road,150,16,134,11.3,Cloudy,1
+2024-09-04,16:00,Wednesday,0,16,Cidco Colony,150,78,72,52.11,Rainy,1
+2024-08-13,18:00,Tuesday,0,18,Shivaji Market,100,87,13,87.11,Cloudy,1
+2024-10-17,05:00,Thursday,0,5,Shivaji Chowk,200,14,186,7.25,Cloudy,1
+2024-04-19,21:00,Friday,0,21,Cidco Colony,150,32,118,21.36,Rainy,1
+2024-05-28,23:00,Tuesday,0,23,Shivaji Market,150,0,150,0.33,Rainy,1
+2024-09-10,22:00,Tuesday,0,22,Vidhyanagar,100,46,54,46.95,Rainy,1
+2024-04-27,21:00,Saturday,1,21,Naag Maidan,100,35,65,35.34,Sunny,1
+2024-12-20,17:00,Friday,0,17,Naag Maidan,100,90,10,90.75,Cloudy,0
+2024-12-01,11:00,Sunday,1,11,Hadgaon Road,100,75,25,75.24,Cloudy,1
+2024-05-15,18:00,Wednesday,0,18,Vishnupuri Colony,50,44,6,88.83,Cloudy,0
+2024-04-10,11:00,Wednesday,0,11,Cidco Colony,200,153,47,76.82,Sunny,1
+2024-04-22,23:00,Monday,0,23,Bus Stand Area,50,2,48,4.19,Rainy,1
+2024-10-09,00:00,Wednesday,0,0,Bus Stand Area,200,22,178,11.35,Rainy,1
+2024-01-12,14:00,Friday,0,14,Naag Maidan,200,154,46,77.35,Cloudy,1
+2024-06-17,16:00,Monday,0,16,Vishnupuri Colony,200,143,57,71.54,Rainy,1
+2024-02-03,08:00,Saturday,1,8,Gurudwara Road,100,72,28,72.24,Sunny,1
+2024-11-18,21:00,Monday,0,21,Gurudwara Road,50,13,37,27.49,Cloudy,1
+2024-02-26,06:00,Monday,0,6,Taroda Naka,50,10,40,21.13,Cloudy,1
+2024-08-25,05:00,Sunday,1,5,Naag Maidan,200,22,178,11.17,Rainy,1
+2024-10-25,18:00,Friday,0,18,Hadgaon Road,150,132,18,88.39,Sunny,1
+2024-02-14,05:00,Wednesday,0,5,Gurudwara Road,200,12,188,6.36,Rainy,1
+2024-03-15,17:00,Friday,0,17,Bazar Ward,150,121,29,80.75,Cloudy,1
+2024-07-13,14:00,Saturday,1,14,Vishnupuri Colony,100,50,50,50.41,Rainy,1
+2024-05-29,13:00,Wednesday,0,13,Bus Stand Area,200,144,56,72.18,Rainy,1
+2024-12-08,02:00,Sunday,1,2,Vishnupuri Colony,50,6,44,13.15,Rainy,1
+2024-04-14,08:00,Sunday,1,8,Shivaji Chowk,100,80,20,80.35,Sunny,1
+2024-05-10,17:00,Friday,0,17,Bazar Ward,200,195,5,97.6,Cloudy,0
+2024-04-07,03:00,Sunday,1,3,Bus Stand Area,50,7,43,14.81,Rainy,1
+2024-09-16,11:00,Monday,0,11,Shivaji Chowk,150,145,5,97.28,Sunny,0
+2024-05-07,05:00,Tuesday,0,5,Vidhyanagar,50,0,50,1.24,Sunny,1
+2024-07-18,08:00,Thursday,0,8,Shivaji Chowk,200,197,3,98.69,Rainy,0
+2024-08-30,14:00,Friday,0,14,Gurudwara Road,50,25,25,51.41,Rainy,1
+2024-12-21,21:00,Saturday,1,21,Vishnupuri Colony,150,49,101,33.07,Rainy,1
+2024-10-17,19:00,Thursday,0,19,Cidco Colony,100,83,17,83.87,Rainy,1
+2024-08-08,09:00,Thursday,0,9,Hadgaon Road,150,148,2,99.32,Cloudy,0
+2024-01-30,22:00,Tuesday,0,22,Taroda Naka,100,23,77,23.36,Cloudy,1
+2024-12-23,14:00,Monday,0,14,Vishnupuri Colony,50,39,11,79.47,Rainy,1
+2024-04-01,14:00,Monday,0,14,Taroda Naka,150,82,68,55.01,Cloudy,1
+2024-06-04,21:00,Tuesday,0,21,Bus Stand Area,200,65,135,32.97,Rainy,1
+2024-10-04,17:00,Friday,0,17,Cidco Colony,200,154,46,77.29,Cloudy,1
+2024-07-21,00:00,Sunday,1,0,Railway Station Road,50,6,44,13.14,Sunny,1
+2024-05-20,04:00,Monday,0,4,Bazar Ward,150,14,136,9.83,Sunny,1
+2024-10-07,17:00,Monday,0,17,Hadgaon Road,200,151,49,75.89,Sunny,1
+2024-03-29,01:00,Friday,0,1,Shivaji Market,50,5,45,10.17,Cloudy,1
+2024-03-12,21:00,Tuesday,0,21,Vazirabad,150,47,103,31.72,Rainy,1
+2024-06-04,05:00,Tuesday,0,5,Vishnupuri Colony,100,17,83,17.71,Sunny,1
+2024-09-23,11:00,Monday,0,11,Shivaji Chowk,50,46,4,93.74,Rainy,0
+2024-09-15,05:00,Sunday,1,5,Hadgaon Road,150,14,136,9.89,Cloudy,1
+2024-11-19,02:00,Tuesday,0,2,Dandapur Road,200,33,167,16.95,Sunny,1
+2024-03-25,21:00,Monday,0,21,Vazirabad,50,19,31,38.33,Cloudy,1
+2024-08-16,01:00,Friday,0,1,Railway Station Road,150,14,136,9.48,Cloudy,1
+2024-05-17,07:00,Friday,0,7,Bus Stand Area,150,52,98,35.3,Rainy,1
+2024-11-27,05:00,Wednesday,0,5,Cidco Colony,50,8,42,17.13,Rainy,1
+2024-05-26,07:00,Sunday,1,7,Shivaji Market,50,12,38,25.65,Rainy,1
+2024-07-13,06:00,Saturday,1,6,Bazar Ward,50,17,33,34.36,Rainy,1
+2024-01-16,01:00,Tuesday,0,1,Kasturba Hospital Area,150,5,145,3.42,Cloudy,1
+2024-02-19,05:00,Monday,0,5,Taroda Naka,50,2,48,5.73,Cloudy,1
+2024-02-05,06:00,Monday,0,6,Naag Maidan,150,49,101,33.2,Cloudy,1
+2024-03-09,15:00,Saturday,1,15,Kasturba Hospital Area,150,103,47,69.01,Cloudy,1
+2024-03-25,16:00,Monday,0,16,Vishnupuri Colony,200,129,71,64.94,Sunny,1
+2024-10-03,21:00,Thursday,0,21,Vidhyanagar,150,67,83,45.2,Cloudy,1
+2024-08-17,21:00,Saturday,1,21,Gurudwara Road,50,20,30,40.11,Rainy,1
+2024-03-27,18:00,Wednesday,0,18,Vidhyanagar,150,122,28,81.41,Rainy,1
+2024-06-24,13:00,Monday,0,13,Kasturba Hospital Area,50,29,21,59.67,Sunny,1
+2024-10-26,00:00,Saturday,1,0,Bazar Ward,50,0,50,0.44,Rainy,1
+2024-12-06,14:00,Friday,0,14,Cidco Colony,50,32,18,64.36,Rainy,1
+2024-06-19,20:00,Wednesday,0,20,Vishnupuri Colony,200,156,44,78.47,Cloudy,1
+2024-02-28,02:00,Wednesday,0,2,Dandapur Road,50,4,46,9.57,Sunny,1
+2024-10-02,20:00,Wednesday,0,20,Gurudwara Road,150,140,10,93.51,Rainy,0
+2024-03-28,14:00,Thursday,0,14,Shivaji Chowk,200,137,63,68.65,Rainy,1
+2024-03-06,07:00,Wednesday,0,7,Vishnupuri Colony,50,19,31,38.97,Sunny,1
+2024-05-04,00:00,Saturday,1,0,Gurudwara Road,100,9,91,9.04,Sunny,1
+2024-08-18,21:00,Sunday,1,21,Shivaji Chowk,150,58,92,39.25,Sunny,1
+2024-02-19,23:00,Monday,0,23,Shivaji Chowk,150,5,145,3.68,Rainy,1
+2024-08-26,00:00,Monday,0,0,Shivaji Market,100,0,100,0.95,Cloudy,1
+2024-09-30,23:00,Monday,0,23,Dandapur Road,50,4,46,9.14,Sunny,1
+2024-11-05,07:00,Tuesday,0,7,Railway Station Road,150,66,84,44.46,Rainy,1
+2024-02-25,23:00,Sunday,1,23,Cidco Colony,50,5,45,10.93,Cloudy,1
+2024-11-30,12:00,Saturday,1,12,Naag Maidan,150,108,42,72.57,Sunny,1
+2024-10-31,15:00,Thursday,0,15,Kasturba Hospital Area,200,129,71,64.82,Sunny,1
+2024-08-28,23:00,Wednesday,0,23,Cidco Colony,50,3,47,6.24,Sunny,1
+2024-09-12,13:00,Thursday,0,13,Shivaji Chowk,150,95,55,63.83,Sunny,1
+2024-10-18,06:00,Friday,0,6,Vidhyanagar,100,39,61,39.32,Sunny,1
+2024-04-08,23:00,Monday,0,23,Shivaji Chowk,150,23,127,15.35,Cloudy,1
+2024-04-26,04:00,Friday,0,4,Vishnupuri Colony,100,7,93,7.37,Cloudy,1
+2024-09-10,08:00,Tuesday,0,8,Gurudwara Road,50,42,8,85.05,Rainy,0
+2024-12-13,15:00,Friday,0,15,Vishnupuri Colony,100,52,48,52.77,Cloudy,1
+2024-07-24,04:00,Wednesday,0,4,Naag Maidan,150,27,123,18.03,Cloudy,1
+2024-08-19,14:00,Monday,0,14,Taroda Naka,150,97,53,64.9,Cloudy,1
+2024-05-25,03:00,Saturday,1,3,Shivaji Chowk,200,35,165,17.77,Sunny,1
+2024-05-25,11:00,Saturday,1,11,Kasturba Hospital Area,200,180,20,90.47,Cloudy,1
+2024-07-17,20:00,Wednesday,0,20,Vazirabad,150,146,4,97.9,Cloudy,0
+2024-12-21,11:00,Saturday,1,11,Hadgaon Road,150,146,4,97.42,Sunny,0
+2024-08-25,04:00,Sunday,1,4,Gurudwara Road,200,34,166,17.13,Rainy,1
+2024-09-14,12:00,Saturday,1,12,Hadgaon Road,100,71,29,71.65,Rainy,1
+2024-06-27,09:00,Thursday,0,9,Shivaji Chowk,100,83,17,83.14,Cloudy,1
+2024-04-25,15:00,Thursday,0,15,Naag Maidan,150,119,31,79.83,Sunny,1
+2024-01-14,01:00,Sunday,1,1,Taroda Naka,100,18,82,18.31,Sunny,1
+2024-11-13,19:00,Wednesday,0,19,Shivaji Chowk,150,117,33,78.17,Sunny,1
+2024-12-10,03:00,Tuesday,0,3,Bus Stand Area,100,0,100,0.07,Cloudy,1
+2024-05-22,16:00,Wednesday,0,16,Taroda Naka,150,89,61,59.65,Cloudy,1
+2024-10-15,01:00,Tuesday,0,1,Hadgaon Road,100,5,95,5.66,Sunny,1
+2024-05-06,22:00,Monday,0,22,Bazar Ward,100,46,54,46.12,Sunny,1
+2024-12-11,15:00,Wednesday,0,15,Bus Stand Area,150,83,67,55.7,Rainy,1
+2024-11-22,09:00,Friday,0,9,Shivaji Chowk,150,133,17,89.11,Rainy,1
+2024-10-01,10:00,Tuesday,0,10,Vazirabad,200,170,30,85.32,Sunny,1
+2024-04-20,00:00,Saturday,1,0,Shivaji Market,200,33,167,16.9,Cloudy,1
+2024-07-17,13:00,Wednesday,0,13,Bus Stand Area,200,138,62,69.36,Sunny,1
+2024-01-05,11:00,Friday,0,11,Cidco Colony,150,107,43,71.95,Cloudy,1
+2024-02-13,13:00,Tuesday,0,13,Shivaji Chowk,50,32,18,65.91,Cloudy,1
+2024-05-13,00:00,Monday,0,0,Bazar Ward,50,8,42,16.03,Cloudy,1
+2024-06-24,08:00,Monday,0,8,Bus Stand Area,50,43,7,86.02,Cloudy,0
+2024-02-16,14:00,Friday,0,14,Hadgaon Road,150,94,56,62.7,Cloudy,1
+2024-02-10,13:00,Saturday,1,13,Gurudwara Road,150,115,35,77.27,Sunny,1
+2024-05-28,00:00,Tuesday,0,0,Shivaji Chowk,150,20,130,13.77,Cloudy,1
+2024-11-09,06:00,Saturday,1,6,Hadgaon Road,50,19,31,39.84,Rainy,1
+2024-09-15,09:00,Sunday,1,9,Cidco Colony,200,158,42,79.34,Sunny,1
+2024-09-23,13:00,Monday,0,13,Vazirabad,200,159,41,79.86,Sunny,1
+2024-08-02,22:00,Friday,0,22,Kasturba Hospital Area,100,43,57,43.32,Sunny,1
+2024-09-14,16:00,Saturday,1,16,Kasturba Hospital Area,50,37,13,74.5,Cloudy,1
+2024-01-30,05:00,Tuesday,0,5,Taroda Naka,200,4,196,2.18,Rainy,1
+2024-08-13,01:00,Tuesday,0,1,Cidco Colony,150,8,142,5.53,Rainy,1
+2024-07-13,10:00,Saturday,1,10,Hadgaon Road,100,70,30,70.04,Cloudy,1
+2024-03-07,00:00,Thursday,0,0,Naag Maidan,150,16,134,11.15,Rainy,1
+2024-04-24,01:00,Wednesday,0,1,Cidco Colony,100,13,87,13.88,Cloudy,1
+2024-11-25,13:00,Monday,0,13,Railway Station Road,200,125,75,62.77,Rainy,1
+2024-04-03,23:00,Wednesday,0,23,Railway Station Road,200,3,197,1.95,Sunny,1
+2024-07-11,20:00,Thursday,0,20,Vidhyanagar,150,146,4,97.44,Cloudy,0
+2024-12-19,07:00,Thursday,0,7,Railway Station Road,150,52,98,35.02,Rainy,1
+2024-07-31,18:00,Wednesday,0,18,Bus Stand Area,50,39,11,78.05,Sunny,1
+2024-12-13,20:00,Friday,0,20,Naag Maidan,150,147,3,98.31,Cloudy,0
+2024-02-16,19:00,Friday,0,19,Bazar Ward,100,93,7,93.23,Rainy,0
+2024-07-15,14:00,Monday,0,14,Dandapur Road,200,155,45,77.71,Sunny,1
+2024-02-22,13:00,Thursday,0,13,Dandapur Road,50,31,19,63.81,Sunny,1
+2024-02-15,21:00,Thursday,0,21,Bus Stand Area,50,16,34,33.65,Sunny,1
+2024-03-12,11:00,Tuesday,0,11,Hadgaon Road,50,46,4,93.54,Sunny,0
+2024-08-01,07:00,Thursday,0,7,Shivaji Chowk,200,64,136,32.2,Cloudy,1
+2024-12-17,07:00,Tuesday,0,7,Bazar Ward,100,23,77,23.77,Sunny,1
+2024-12-06,23:00,Friday,0,23,Bazar Ward,100,2,98,2.85,Cloudy,1
+2024-01-13,00:00,Saturday,1,0,Vishnupuri Colony,100,13,87,13.97,Rainy,1
+2024-02-15,02:00,Thursday,0,2,Bus Stand Area,100,0,100,0.15,Rainy,1
+2024-12-11,13:00,Wednesday,0,13,Hadgaon Road,50,33,17,66.08,Rainy,1
+2024-07-08,09:00,Monday,0,9,Vidhyanagar,100,97,3,97.72,Cloudy,0
+2024-07-11,19:00,Thursday,0,19,Cidco Colony,200,172,28,86.46,Rainy,1
+2024-01-28,03:00,Sunday,1,3,Shivaji Market,150,23,127,15.96,Sunny,1
+2024-09-09,04:00,Monday,0,4,Shivaji Chowk,200,17,183,8.76,Rainy,1
+2024-09-30,17:00,Monday,0,17,Shivaji Chowk,100,85,15,85.27,Rainy,1
+2024-08-19,14:00,Monday,0,14,Bus Stand Area,200,128,72,64.09,Cloudy,1
+2024-11-03,13:00,Sunday,1,13,Vidhyanagar,200,123,77,61.52,Sunny,1
+2024-06-13,20:00,Thursday,0,20,Shivaji Market,100,87,13,87.64,Cloudy,1
+2024-12-19,16:00,Thursday,0,16,Hadgaon Road,100,65,35,65.48,Sunny,1
+2024-07-19,11:00,Friday,0,11,Gurudwara Road,150,120,30,80.57,Sunny,1
+2024-12-27,07:00,Friday,0,7,Vazirabad,150,35,115,24.0,Rainy,1
+2024-10-15,13:00,Tuesday,0,13,Vidhyanagar,200,106,94,53.43,Rainy,1
+2024-03-02,02:00,Saturday,1,2,Bazar Ward,100,2,98,2.79,Rainy,1
+2024-05-08,16:00,Wednesday,0,16,Bus Stand Area,50,35,15,71.48,Rainy,1
+2024-10-11,02:00,Friday,0,2,Shivaji Chowk,150,21,129,14.24,Sunny,1
+2024-10-05,11:00,Saturday,1,11,Naag Maidan,100,72,28,72.0,Cloudy,1
+2024-05-29,02:00,Wednesday,0,2,Vishnupuri Colony,100,7,93,7.93,Cloudy,1
+2024-09-18,16:00,Wednesday,0,16,Bus Stand Area,150,85,65,56.73,Rainy,1
+2024-04-29,05:00,Monday,0,5,Taroda Naka,200,9,191,4.7,Cloudy,1
+2024-05-31,23:00,Friday,0,23,Vidhyanagar,200,26,174,13.39,Sunny,1
+2024-02-04,11:00,Sunday,1,11,Bazar Ward,200,185,15,92.54,Cloudy,1
+2024-04-07,14:00,Sunday,1,14,Dandapur Road,50,26,24,53.45,Cloudy,1
+2024-06-27,22:00,Thursday,0,22,Vishnupuri Colony,150,61,89,40.99,Cloudy,1
+2024-08-31,03:00,Saturday,1,3,Shivaji Market,100,16,84,16.66,Rainy,1
+2024-03-15,08:00,Friday,0,8,Gurudwara Road,200,153,47,76.92,Sunny,1
+2024-01-28,08:00,Sunday,1,8,Shivaji Chowk,50,47,3,95.29,Sunny,0
+2024-04-08,20:00,Monday,0,20,Shivaji Chowk,50,48,2,96.21,Rainy,0
+2024-06-24,20:00,Monday,0,20,Vazirabad,150,107,43,71.82,Sunny,1
+2024-11-13,15:00,Wednesday,0,15,Vazirabad,200,103,97,51.82,Sunny,1
+2024-11-06,00:00,Wednesday,0,0,Vishnupuri Colony,200,32,168,16.23,Rainy,1
+2024-04-30,20:00,Tuesday,0,20,Bus Stand Area,50,35,15,71.15,Sunny,1
+2024-08-09,00:00,Friday,0,0,Vazirabad,150,29,121,19.78,Cloudy,1
+2024-01-29,19:00,Monday,0,19,Shivaji Market,150,110,40,73.44,Rainy,1
+2024-07-01,03:00,Monday,0,3,Vidhyanagar,100,1,99,1.02,Sunny,1
+2024-05-13,22:00,Monday,0,22,Hadgaon Road,50,10,40,20.01,Rainy,1
+2024-08-24,05:00,Saturday,1,5,Bazar Ward,150,16,134,11.24,Sunny,1
+2024-08-22,16:00,Thursday,0,16,Kasturba Hospital Area,50,36,14,72.2,Cloudy,1
+2024-01-13,03:00,Saturday,1,3,Vishnupuri Colony,150,4,146,2.7,Rainy,1
+2024-03-01,07:00,Friday,0,7,Dandapur Road,150,59,91,39.65,Cloudy,1
+2024-06-15,14:00,Saturday,1,14,Vidhyanagar,200,118,82,59.16,Cloudy,1
+2024-01-08,09:00,Monday,0,9,Taroda Naka,50,48,2,96.7,Rainy,0
+2024-08-10,10:00,Saturday,1,10,Bus Stand Area,50,37,13,75.35,Sunny,1
+2024-01-29,13:00,Monday,0,13,Cidco Colony,150,80,70,53.75,Rainy,1
+2024-12-03,07:00,Tuesday,0,7,Vishnupuri Colony,150,70,80,47.26,Sunny,1
+2024-12-28,14:00,Saturday,1,14,Shivaji Chowk,150,101,49,67.99,Sunny,1
+2024-10-24,16:00,Thursday,0,16,Gurudwara Road,50,37,13,74.56,Cloudy,1
+2024-09-08,06:00,Sunday,1,6,Shivaji Market,50,13,37,26.25,Rainy,1
+2024-12-30,20:00,Monday,0,20,Vazirabad,100,81,19,81.61,Rainy,1
+2024-01-09,01:00,Tuesday,0,1,Kasturba Hospital Area,200,27,173,13.87,Rainy,1
+2024-09-01,15:00,Sunday,1,15,Naag Maidan,150,93,57,62.55,Cloudy,1
+2024-02-25,10:00,Sunday,1,10,Bus Stand Area,50,42,8,85.46,Sunny,0
+2024-11-18,22:00,Monday,0,22,Cidco Colony,150,74,76,49.46,Cloudy,1
+2024-02-13,11:00,Tuesday,0,11,Vidhyanagar,50,41,9,82.19,Cloudy,0
+2024-01-13,23:00,Saturday,1,23,Kasturba Hospital Area,200,1,199,0.59,Cloudy,1
+2024-12-20,05:00,Friday,0,5,Shivaji Chowk,50,7,43,15.85,Cloudy,1
+2024-09-22,20:00,Sunday,1,20,Taroda Naka,200,164,36,82.07,Sunny,1
+2024-12-19,02:00,Thursday,0,2,Cidco Colony,200,22,178,11.18,Sunny,1
+2024-12-23,22:00,Monday,0,22,Taroda Naka,100,43,57,43.72,Sunny,1
+2024-11-05,09:00,Tuesday,0,9,Bazar Ward,50,42,8,85.47,Sunny,0
+2024-06-01,00:00,Saturday,1,0,Taroda Naka,150,6,144,4.01,Cloudy,1
+2024-11-17,04:00,Sunday,1,4,Cidco Colony,50,4,46,8.51,Sunny,1
+2024-11-13,02:00,Wednesday,0,2,Shivaji Chowk,100,11,89,11.64,Cloudy,1
+2024-07-06,03:00,Saturday,1,3,Cidco Colony,150,19,131,13.19,Sunny,1
+2024-05-02,01:00,Thursday,0,1,Vidhyanagar,50,5,45,10.97,Rainy,1
+2024-07-15,09:00,Monday,0,9,Railway Station Road,200,153,47,76.77,Cloudy,1
+2024-10-27,08:00,Sunday,1,8,Bazar Ward,100,86,14,86.7,Rainy,1
+2024-05-23,00:00,Thursday,0,0,Kasturba Hospital Area,150,2,148,1.7,Rainy,1
+2024-09-14,10:00,Saturday,1,10,Naag Maidan,50,49,1,99.6,Cloudy,0
+2024-08-14,15:00,Wednesday,0,15,Gurudwara Road,50,35,15,71.82,Cloudy,1
+2024-01-22,14:00,Monday,0,14,Railway Station Road,200,122,78,61.07,Cloudy,1
+2024-07-02,15:00,Tuesday,0,15,Dandapur Road,150,96,54,64.12,Cloudy,1
+2024-10-29,08:00,Tuesday,0,8,Vidhyanagar,50,46,4,92.95,Cloudy,0
+2024-01-03,21:00,Wednesday,0,21,Hadgaon Road,50,21,29,43.26,Rainy,1
+2024-06-11,09:00,Tuesday,0,9,Bus Stand Area,100,87,13,87.82,Sunny,1
+2024-08-06,05:00,Tuesday,0,5,Railway Station Road,200,12,188,6.25,Cloudy,1
+2024-06-21,14:00,Friday,0,14,Dandapur Road,150,105,45,70.1,Sunny,1
+2024-08-16,08:00,Friday,0,8,Shivaji Chowk,100,74,26,74.3,Rainy,1
+2024-01-09,15:00,Tuesday,0,15,Cidco Colony,200,128,72,64.36,Cloudy,1
+2024-02-12,18:00,Monday,0,18,Railway Station Road,150,114,36,76.61,Rainy,1
+2024-11-18,01:00,Monday,0,1,Hadgaon Road,100,10,90,10.6,Rainy,1
+2024-10-17,14:00,Thursday,0,14,Cidco Colony,150,84,66,56.58,Cloudy,1
+2024-01-08,09:00,Monday,0,9,Kasturba Hospital Area,200,194,6,97.24,Sunny,0
+2024-10-10,13:00,Thursday,0,13,Shivaji Chowk,200,151,49,75.7,Cloudy,1
+2024-03-03,14:00,Sunday,1,14,Railway Station Road,150,82,68,54.77,Sunny,1
+2024-07-20,17:00,Saturday,1,17,Cidco Colony,100,97,3,97.57,Rainy,0
+2024-09-06,17:00,Friday,0,17,Railway Station Road,200,191,9,95.62,Cloudy,0
+2024-11-27,04:00,Wednesday,0,4,Shivaji Chowk,150,11,139,7.71,Cloudy,1
+2024-09-12,23:00,Thursday,0,23,Vishnupuri Colony,50,0,50,0.7,Rainy,1
+2024-02-03,14:00,Saturday,1,14,Vazirabad,50,29,21,58.1,Cloudy,1
+2024-02-28,13:00,Wednesday,0,13,Vidhyanagar,200,125,75,62.92,Rainy,1
+2024-08-12,21:00,Monday,0,21,Vazirabad,150,51,99,34.62,Sunny,1
+2024-06-27,19:00,Thursday,0,19,Vidhyanagar,150,124,26,82.89,Cloudy,1
+2024-11-19,09:00,Tuesday,0,9,Railway Station Road,200,157,43,78.74,Cloudy,1
+2024-02-14,01:00,Wednesday,0,1,Dandapur Road,100,18,82,18.72,Sunny,1
+2024-11-24,04:00,Sunday,1,4,Cidco Colony,50,2,48,4.27,Rainy,1
+2024-04-11,15:00,Thursday,0,15,Shivaji Market,50,32,18,65.51,Rainy,1
+2024-12-20,00:00,Friday,0,0,Bazar Ward,50,7,43,14.22,Rainy,1
+2024-01-16,00:00,Tuesday,0,0,Hadgaon Road,100,16,84,16.06,Cloudy,1
+2024-09-13,13:00,Friday,0,13,Bazar Ward,150,80,70,53.35,Rainy,1
+2024-10-22,13:00,Tuesday,0,13,Railway Station Road,150,114,36,76.22,Rainy,1
+2024-06-10,07:00,Monday,0,7,Shivaji Market,50,18,32,37.6,Rainy,1
+2024-07-07,11:00,Sunday,1,11,Bus Stand Area,200,180,20,90.14,Cloudy,1
+2024-04-14,02:00,Sunday,1,2,Railway Station Road,150,2,148,1.89,Cloudy,1
+2024-09-19,05:00,Thursday,0,5,Bazar Ward,150,24,126,16.16,Rainy,1
+2024-03-14,12:00,Thursday,0,12,Bus Stand Area,50,36,14,72.09,Sunny,1
+2024-08-27,19:00,Tuesday,0,19,Cidco Colony,100,79,21,79.68,Sunny,1
+2024-11-02,05:00,Saturday,1,5,Taroda Naka,50,7,43,14.26,Sunny,1
+2024-05-14,04:00,Tuesday,0,4,Taroda Naka,150,14,136,9.49,Sunny,1
+2024-03-16,22:00,Saturday,1,22,Vishnupuri Colony,200,48,152,24.19,Sunny,1
+2024-10-28,06:00,Monday,0,6,Naag Maidan,200,74,126,37.41,Cloudy,1
+2024-06-23,16:00,Sunday,1,16,Gurudwara Road,100,68,32,68.51,Cloudy,1
+2024-09-04,12:00,Wednesday,0,12,Dandapur Road,100,63,37,63.53,Cloudy,1
+2024-11-05,18:00,Tuesday,0,18,Vishnupuri Colony,50,44,6,88.94,Cloudy,0
+2024-09-27,12:00,Friday,0,12,Cidco Colony,100,66,34,66.12,Cloudy,1
+2024-02-19,17:00,Monday,0,17,Kasturba Hospital Area,150,113,37,75.72,Sunny,1
+2024-01-17,14:00,Wednesday,0,14,Naag Maidan,100,56,44,56.44,Cloudy,1
+2024-02-23,20:00,Friday,0,20,Vishnupuri Colony,200,181,19,90.56,Sunny,1
+2024-06-06,12:00,Thursday,0,12,Railway Station Road,50,39,11,78.05,Rainy,1
+2024-12-28,08:00,Saturday,1,8,Bus Stand Area,50,42,8,85.71,Rainy,0
+2024-11-16,11:00,Saturday,1,11,Shivaji Chowk,150,137,13,91.97,Sunny,1
+2024-12-27,19:00,Friday,0,19,Bus Stand Area,200,183,17,91.6,Sunny,1
+2024-09-12,19:00,Thursday,0,19,Bus Stand Area,100,88,12,88.81,Cloudy,1
+2024-08-11,13:00,Sunday,1,13,Bus Stand Area,100,72,28,72.81,Rainy,1
+2024-09-20,10:00,Friday,0,10,Cidco Colony,100,84,16,84.09,Rainy,1
+2024-04-30,18:00,Tuesday,0,18,Dandapur Road,100,78,22,78.34,Rainy,1
+2024-04-09,10:00,Tuesday,0,10,Railway Station Road,100,75,25,75.59,Rainy,1
+2024-03-19,17:00,Tuesday,0,17,Vidhyanagar,200,192,8,96.27,Rainy,0
+2024-06-26,11:00,Wednesday,0,11,Shivaji Market,100,82,18,82.35,Sunny,1
+2024-04-28,00:00,Sunday,1,0,Dandapur Road,200,12,188,6.5,Cloudy,1
+2024-10-12,07:00,Saturday,1,7,Shivaji Chowk,150,70,80,46.74,Cloudy,1
+2024-04-06,00:00,Saturday,1,0,Taroda Naka,150,29,121,19.43,Cloudy,1
+2024-03-16,08:00,Saturday,1,8,Vishnupuri Colony,50,49,1,98.88,Cloudy,0
+2024-11-25,11:00,Monday,0,11,Shivaji Market,200,141,59,70.7,Cloudy,1
+2024-10-28,07:00,Monday,0,7,Bazar Ward,200,58,142,29.42,Rainy,1
+2024-08-19,10:00,Monday,0,10,Shivaji Chowk,200,147,53,73.54,Sunny,1
+2024-09-16,18:00,Monday,0,18,Taroda Naka,100,77,23,77.71,Rainy,1
+2024-06-05,20:00,Wednesday,0,20,Bazar Ward,100,80,20,80.71,Rainy,1
+2024-12-05,07:00,Thursday,0,7,Kasturba Hospital Area,200,41,159,20.73,Cloudy,1
+2024-03-25,09:00,Monday,0,9,Railway Station Road,50,43,7,87.1,Sunny,0
+2024-05-30,11:00,Thursday,0,11,Vazirabad,50,38,12,76.42,Cloudy,1
+2024-01-21,13:00,Sunday,1,13,Taroda Naka,150,96,54,64.56,Sunny,1
+2024-09-25,04:00,Wednesday,0,4,Shivaji Market,150,9,141,6.56,Rainy,1
+2024-06-08,18:00,Saturday,1,18,Vazirabad,100,78,22,78.44,Cloudy,1
+2024-02-29,06:00,Thursday,0,6,Vishnupuri Colony,100,26,74,26.61,Rainy,1
+2024-01-12,01:00,Friday,0,1,Railway Station Road,150,29,121,19.68,Sunny,1
+2024-02-13,15:00,Tuesday,0,15,Vazirabad,50,27,23,55.91,Cloudy,1
+2024-10-04,17:00,Friday,0,17,Dandapur Road,150,145,5,96.95,Sunny,0
+2024-07-12,07:00,Friday,0,7,Vazirabad,50,23,27,47.16,Rainy,1
+2024-03-21,15:00,Thursday,0,15,Gurudwara Road,100,65,35,65.62,Rainy,1
+2024-07-23,17:00,Tuesday,0,17,Gurudwara Road,50,44,6,88.43,Sunny,0
+2024-04-17,10:00,Wednesday,0,10,Naag Maidan,150,116,34,77.55,Cloudy,1
+2024-09-14,13:00,Saturday,1,13,Vidhyanagar,100,55,45,55.82,Sunny,1
+2024-06-20,11:00,Thursday,0,11,Hadgaon Road,50,37,13,75.37,Sunny,1
+2024-11-12,22:00,Tuesday,0,22,Gurudwara Road,100,39,61,39.65,Sunny,1
+2024-05-14,07:00,Tuesday,0,7,Vishnupuri Colony,150,41,109,27.63,Sunny,1
+2024-05-25,04:00,Saturday,1,4,Shivaji Chowk,100,4,96,4.71,Sunny,1
+2024-03-31,01:00,Sunday,1,1,Hadgaon Road,200,32,168,16.1,Sunny,1
+2024-09-19,11:00,Thursday,0,11,Shivaji Chowk,200,182,18,91.15,Rainy,1
+2024-10-03,16:00,Thursday,0,16,Vishnupuri Colony,150,111,39,74.18,Cloudy,1
+2024-01-26,03:00,Friday,0,3,Bazar Ward,50,9,41,19.8,Sunny,1
+2024-09-13,10:00,Friday,0,10,Dandapur Road,150,124,26,82.81,Cloudy,1
+2024-09-30,15:00,Monday,0,15,Kasturba Hospital Area,50,34,16,69.64,Sunny,1
+2024-06-01,17:00,Saturday,1,17,Shivaji Market,50,44,6,88.93,Rainy,0
+2024-03-10,10:00,Sunday,1,10,Cidco Colony,200,166,34,83.31,Cloudy,1
+2024-08-30,15:00,Friday,0,15,Shivaji Market,100,75,25,75.33,Rainy,1
+2024-02-26,02:00,Monday,0,2,Vishnupuri Colony,50,7,43,15.02,Rainy,1
+2024-08-26,18:00,Monday,0,18,Railway Station Road,200,187,13,93.61,Sunny,1
+2024-10-22,02:00,Tuesday,0,2,Shivaji Chowk,150,13,137,8.68,Rainy,1
+2024-01-13,05:00,Saturday,1,5,Gurudwara Road,100,0,100,0.69,Sunny,1
+2024-07-05,11:00,Friday,0,11,Kasturba Hospital Area,100,85,15,85.43,Sunny,1
+2024-09-27,10:00,Friday,0,10,Taroda Naka,100,86,14,86.26,Cloudy,1
+2024-09-10,15:00,Tuesday,0,15,Bus Stand Area,100,60,40,60.77,Rainy,1
+2024-03-21,12:00,Thursday,0,12,Gurudwara Road,200,159,41,79.93,Cloudy,1
+2024-09-15,15:00,Sunday,1,15,Taroda Naka,50,25,25,50.43,Rainy,1
+2024-02-13,23:00,Tuesday,0,23,Shivaji Market,150,22,128,14.97,Cloudy,1
+2024-12-19,14:00,Thursday,0,14,Kasturba Hospital Area,150,99,51,66.45,Sunny,1
+2024-12-09,03:00,Monday,0,3,Naag Maidan,150,1,149,1.19,Rainy,1
+2024-09-09,09:00,Monday,0,9,Bazar Ward,50,45,5,91.38,Rainy,0
+2024-01-16,11:00,Tuesday,0,11,Bus Stand Area,150,129,21,86.11,Cloudy,1
+2024-12-18,03:00,Wednesday,0,3,Bazar Ward,100,15,85,15.17,Rainy,1
+2024-11-30,04:00,Saturday,1,4,Taroda Naka,100,9,91,9.71,Cloudy,1
+2024-06-03,20:00,Monday,0,20,Gurudwara Road,200,149,51,74.68,Cloudy,1
+2024-10-13,00:00,Sunday,1,0,Naag Maidan,100,3,97,3.43,Cloudy,1
+2024-01-06,13:00,Saturday,1,13,Shivaji Chowk,100,74,26,74.95,Sunny,1
+2024-11-01,08:00,Friday,0,8,Railway Station Road,50,39,11,78.26,Cloudy,1
+2024-08-07,23:00,Wednesday,0,23,Vidhyanagar,150,13,137,8.82,Sunny,1
+2024-12-28,19:00,Saturday,1,19,Hadgaon Road,150,127,23,85.17,Sunny,1
+2024-12-20,03:00,Friday,0,3,Dandapur Road,50,2,48,4.13,Sunny,1
+2024-09-13,12:00,Friday,0,12,Naag Maidan,50,30,20,60.29,Cloudy,1
+2024-01-03,14:00,Wednesday,0,14,Bazar Ward,200,141,59,70.86,Rainy,1
+2024-06-03,02:00,Monday,0,2,Vidhyanagar,100,6,94,6.12,Sunny,1
+2024-07-01,11:00,Monday,0,11,Shivaji Market,150,117,33,78.05,Cloudy,1
+2024-03-27,16:00,Wednesday,0,16,Kasturba Hospital Area,150,115,35,77.33,Sunny,1
+2024-07-16,07:00,Tuesday,0,7,Gurudwara Road,200,65,135,32.75,Sunny,1
+2024-01-16,08:00,Tuesday,0,8,Kasturba Hospital Area,200,167,33,83.81,Rainy,1
+2024-12-01,21:00,Sunday,1,21,Gurudwara Road,50,17,33,34.39,Sunny,1
+2024-07-20,11:00,Saturday,1,11,Vidhyanagar,100,87,13,87.2,Sunny,1
+2024-10-29,21:00,Tuesday,0,21,Bazar Ward,100,29,71,29.99,Sunny,1
+2024-04-11,21:00,Thursday,0,21,Shivaji Market,150,70,80,47.03,Cloudy,1
+2024-09-16,06:00,Monday,0,6,Cidco Colony,200,49,151,24.92,Cloudy,1
+2024-06-13,22:00,Thursday,0,22,Bazar Ward,200,56,144,28.44,Sunny,1
+2024-10-16,20:00,Wednesday,0,20,Cidco Colony,50,35,15,71.94,Cloudy,1
+2024-08-23,03:00,Friday,0,3,Dandapur Road,150,4,146,2.9,Sunny,1
+2024-03-04,00:00,Monday,0,0,Vishnupuri Colony,150,17,133,11.8,Cloudy,1
+2024-05-20,05:00,Monday,0,5,Shivaji Market,50,6,44,13.66,Sunny,1
+2024-03-09,14:00,Saturday,1,14,Cidco Colony,150,99,51,66.63,Rainy,1
+2024-03-03,03:00,Sunday,1,3,Shivaji Chowk,100,3,97,3.57,Sunny,1
+2024-05-11,23:00,Saturday,1,23,Vazirabad,50,0,50,0.17,Cloudy,1
+2024-11-10,19:00,Sunday,1,19,Bazar Ward,200,187,13,93.54,Cloudy,1
+2024-10-22,19:00,Tuesday,0,19,Hadgaon Road,200,188,12,94.26,Cloudy,1
+2024-05-23,06:00,Thursday,0,6,Dandapur Road,100,35,65,35.96,Sunny,1
+2024-10-29,09:00,Tuesday,0,9,Taroda Naka,150,142,8,94.73,Sunny,0
+2024-12-18,23:00,Wednesday,0,23,Railway Station Road,150,12,138,8.63,Sunny,1
+2024-10-10,08:00,Thursday,0,8,Railway Station Road,100,83,17,83.83,Sunny,1
+2024-03-24,11:00,Sunday,1,11,Vazirabad,200,179,21,89.5,Rainy,1
+2024-11-28,02:00,Thursday,0,2,Gurudwara Road,200,19,181,9.74,Rainy,1
+2024-01-15,12:00,Monday,0,12,Vazirabad,150,82,68,55.2,Rainy,1
+2024-02-06,00:00,Tuesday,0,0,Vishnupuri Colony,50,0,50,1.63,Sunny,1
+2024-03-04,15:00,Monday,0,15,Naag Maidan,200,126,74,63.26,Rainy,1
+2024-11-16,02:00,Saturday,1,2,Vazirabad,100,7,93,7.06,Rainy,1
+2024-10-23,00:00,Wednesday,0,0,Vidhyanagar,50,2,48,4.01,Sunny,1
+2024-02-14,10:00,Wednesday,0,10,Bazar Ward,50,36,14,73.96,Rainy,1
+2024-10-15,11:00,Tuesday,0,11,Vidhyanagar,100,89,11,89.6,Rainy,1
+2024-10-03,11:00,Thursday,0,11,Railway Station Road,50,35,15,71.47,Cloudy,1
+2024-03-24,03:00,Sunday,1,3,Gurudwara Road,100,11,89,11.21,Cloudy,1
+2024-07-15,15:00,Monday,0,15,Taroda Naka,100,63,37,63.2,Sunny,1
+2024-09-22,08:00,Sunday,1,8,Naag Maidan,100,74,26,74.86,Rainy,1
+2024-07-27,06:00,Saturday,1,6,Dandapur Road,200,42,158,21.23,Sunny,1
+2024-08-01,15:00,Thursday,0,15,Railway Station Road,50,27,23,54.09,Rainy,1
+2024-12-18,19:00,Wednesday,0,19,Taroda Naka,200,147,53,73.85,Sunny,1
+2024-09-15,08:00,Sunday,1,8,Shivaji Chowk,100,76,24,76.15,Rainy,1
+2024-09-13,02:00,Friday,0,2,Dandapur Road,100,0,100,0.76,Rainy,1
+2024-03-17,10:00,Sunday,1,10,Taroda Naka,50,42,8,84.09,Cloudy,0
+2024-11-20,22:00,Wednesday,0,22,Bazar Ward,150,52,98,35.17,Sunny,1
+2024-06-21,03:00,Friday,0,3,Dandapur Road,150,19,131,12.94,Rainy,1
+2024-03-27,04:00,Wednesday,0,4,Vishnupuri Colony,150,6,144,4.04,Rainy,1
+2024-11-16,11:00,Saturday,1,11,Shivaji Market,200,193,7,96.78,Cloudy,0
+2024-11-12,09:00,Tuesday,0,9,Vazirabad,100,85,15,85.3,Cloudy,1
+2024-10-24,05:00,Thursday,0,5,Railway Station Road,150,5,145,3.71,Sunny,1
+2024-09-01,11:00,Sunday,1,11,Bazar Ward,150,119,31,79.75,Cloudy,1
+2024-12-16,19:00,Monday,0,19,Taroda Naka,150,149,1,99.57,Sunny,0
+2024-03-28,20:00,Thursday,0,20,Taroda Naka,100,78,22,78.42,Sunny,1
+2024-04-08,17:00,Monday,0,17,Bus Stand Area,200,168,32,84.16,Cloudy,1
+2024-11-14,15:00,Thursday,0,15,Naag Maidan,200,137,63,68.73,Cloudy,1
+2024-11-22,03:00,Friday,0,3,Dandapur Road,100,4,96,4.67,Rainy,1
+2024-04-24,04:00,Wednesday,0,4,Vishnupuri Colony,150,25,125,17.26,Cloudy,1
+2024-10-25,16:00,Friday,0,16,Kasturba Hospital Area,150,99,51,66.61,Sunny,1
+2024-06-24,07:00,Monday,0,7,Vishnupuri Colony,100,39,61,39.88,Sunny,1
+2024-02-01,07:00,Thursday,0,7,Vishnupuri Colony,100,32,68,32.9,Rainy,1
+2024-05-03,14:00,Friday,0,14,Vazirabad,50,34,16,68.54,Sunny,1
+2024-09-04,06:00,Wednesday,0,6,Shivaji Market,50,22,28,45.35,Sunny,1
+2024-01-14,14:00,Sunday,1,14,Railway Station Road,150,89,61,59.69,Rainy,1
+2024-08-12,23:00,Monday,0,23,Vishnupuri Colony,150,18,132,12.49,Rainy,1
+2024-09-07,02:00,Saturday,1,2,Taroda Naka,200,1,199,0.58,Cloudy,1
+2024-09-16,23:00,Monday,0,23,Bazar Ward,50,5,45,10.31,Cloudy,1
+2024-11-09,23:00,Saturday,1,23,Kasturba Hospital Area,50,9,41,18.53,Sunny,1
+2024-06-20,09:00,Thursday,0,9,Cidco Colony,100,70,30,70.71,Sunny,1
+2024-04-29,05:00,Monday,0,5,Dandapur Road,50,0,50,0.19,Sunny,1
+2024-03-07,06:00,Thursday,0,6,Shivaji Market,200,69,131,34.75,Sunny,1
+2024-06-19,18:00,Wednesday,0,18,Vidhyanagar,50,45,5,91.1,Cloudy,0
+2024-05-21,12:00,Tuesday,0,12,Bus Stand Area,200,130,70,65.48,Rainy,1
+2024-08-22,20:00,Thursday,0,20,Railway Station Road,150,142,8,94.97,Rainy,0
+2024-08-26,21:00,Monday,0,21,Railway Station Road,200,50,150,25.23,Rainy,1
+2024-12-14,16:00,Saturday,1,16,Vazirabad,200,102,98,51.05,Rainy,1
+2024-09-07,03:00,Saturday,1,3,Kasturba Hospital Area,50,3,47,7.38,Sunny,1
+2024-02-03,13:00,Saturday,1,13,Taroda Naka,50,34,16,69.91,Rainy,1
+2024-02-03,01:00,Saturday,1,1,Gurudwara Road,100,18,82,18.81,Rainy,1
+2024-02-20,14:00,Tuesday,0,14,Hadgaon Road,200,150,50,75.44,Sunny,1
+2024-04-18,11:00,Thursday,0,11,Shivaji Market,50,45,5,90.61,Sunny,0
+2024-04-11,19:00,Thursday,0,19,Bazar Ward,50,47,3,96.0,Sunny,0
+2024-11-13,00:00,Wednesday,0,0,Shivaji Market,50,2,48,4.95,Rainy,1
+2024-11-20,02:00,Wednesday,0,2,Taroda Naka,150,14,136,9.94,Rainy,1
+2024-01-07,05:00,Sunday,1,5,Naag Maidan,100,8,92,8.59,Rainy,1
+2024-05-27,12:00,Monday,0,12,Vazirabad,100,77,23,77.74,Rainy,1
+2024-06-09,23:00,Sunday,1,23,Kasturba Hospital Area,50,9,41,19.69,Sunny,1
+2024-11-15,21:00,Friday,0,21,Naag Maidan,50,14,36,29.23,Sunny,1
+2024-01-08,08:00,Monday,0,8,Railway Station Road,100,85,15,85.13,Sunny,1
+2024-08-04,21:00,Sunday,1,21,Vazirabad,200,47,153,23.9,Rainy,1
+2024-10-22,21:00,Tuesday,0,21,Kasturba Hospital Area,150,73,77,48.92,Cloudy,1
+2024-01-30,02:00,Tuesday,0,2,Vidhyanagar,150,24,126,16.45,Cloudy,1
+2024-11-07,20:00,Thursday,0,20,Vidhyanagar,200,181,19,90.82,Rainy,1
+2024-03-12,03:00,Tuesday,0,3,Hadgaon Road,200,26,174,13.26,Rainy,1
+2024-04-23,09:00,Tuesday,0,9,Vidhyanagar,200,161,39,80.78,Rainy,1
+2024-02-14,16:00,Wednesday,0,16,Cidco Colony,100,60,40,60.3,Rainy,1
+2024-12-10,01:00,Tuesday,0,1,Bus Stand Area,150,26,124,17.41,Sunny,1
+2024-04-12,17:00,Friday,0,17,Hadgaon Road,100,73,27,73.66,Rainy,1
+2024-06-08,03:00,Saturday,1,3,Cidco Colony,50,5,45,10.27,Cloudy,1
+2024-08-31,17:00,Saturday,1,17,Dandapur Road,150,126,24,84.13,Rainy,1
+2024-10-10,21:00,Thursday,0,21,Cidco Colony,150,47,103,31.74,Sunny,1
+2024-03-28,12:00,Thursday,0,12,Gurudwara Road,150,105,45,70.47,Rainy,1
+2024-02-02,23:00,Friday,0,23,Bazar Ward,200,6,194,3.03,Cloudy,1
+2024-02-23,05:00,Friday,0,5,Bazar Ward,150,10,140,7.08,Sunny,1
+2024-09-03,21:00,Tuesday,0,21,Vidhyanagar,200,83,117,41.86,Cloudy,1
+2024-06-08,08:00,Saturday,1,8,Dandapur Road,50,48,2,97.95,Sunny,0
+2024-11-19,09:00,Tuesday,0,9,Hadgaon Road,200,189,11,94.67,Rainy,1
+2024-01-12,11:00,Friday,0,11,Cidco Colony,100,71,29,71.58,Cloudy,1
+2024-02-17,13:00,Saturday,1,13,Taroda Naka,150,112,38,75.12,Cloudy,1
+2024-09-27,18:00,Friday,0,18,Dandapur Road,100,75,25,75.81,Cloudy,1
+2024-01-14,07:00,Sunday,1,7,Shivaji Market,50,11,39,22.73,Cloudy,1
+2024-04-01,06:00,Monday,0,6,Vazirabad,50,12,38,24.2,Cloudy,1
+2024-08-26,19:00,Monday,0,19,Vidhyanagar,50,37,13,74.75,Rainy,1
+2024-10-17,23:00,Thursday,0,23,Naag Maidan,100,8,92,8.02,Rainy,1
+2024-09-07,10:00,Saturday,1,10,Vidhyanagar,150,140,10,93.44,Cloudy,0
+2024-04-09,14:00,Tuesday,0,14,Shivaji Chowk,200,159,41,79.62,Sunny,1
+2024-01-11,12:00,Thursday,0,12,Vazirabad,200,134,66,67.48,Rainy,1
+2024-01-07,13:00,Sunday,1,13,Hadgaon Road,150,105,45,70.11,Cloudy,1
+2024-10-01,22:00,Tuesday,0,22,Railway Station Road,200,72,128,36.15,Rainy,1
+2024-05-17,19:00,Friday,0,19,Vidhyanagar,50,36,14,72.45,Rainy,1
+2024-10-04,22:00,Friday,0,22,Naag Maidan,50,20,30,40.27,Cloudy,1
+2024-02-06,15:00,Tuesday,0,15,Vidhyanagar,50,29,21,58.58,Cloudy,1
+2024-01-03,12:00,Wednesday,0,12,Kasturba Hospital Area,150,106,44,70.79,Rainy,1
+2024-12-07,04:00,Saturday,1,4,Shivaji Market,200,33,167,16.9,Cloudy,1
+2024-07-19,07:00,Friday,0,7,Hadgaon Road,100,40,60,40.12,Cloudy,1
+2024-02-22,08:00,Thursday,0,8,Gurudwara Road,50,42,8,84.6,Cloudy,0
+2024-12-15,01:00,Sunday,1,1,Naag Maidan,50,3,47,7.64,Rainy,1
+2024-06-23,04:00,Sunday,1,4,Shivaji Chowk,200,31,169,15.8,Cloudy,1
+2024-10-09,10:00,Wednesday,0,10,Gurudwara Road,100,99,1,99.02,Sunny,0
+2024-07-22,08:00,Monday,0,8,Vidhyanagar,50,42,8,84.35,Cloudy,0
+2024-12-18,16:00,Wednesday,0,16,Dandapur Road,100,61,39,61.89,Sunny,1
+2024-01-12,07:00,Friday,0,7,Vishnupuri Colony,100,35,65,35.43,Sunny,1
+2024-09-22,18:00,Sunday,1,18,Shivaji Market,50,35,15,71.41,Sunny,1
+2024-09-28,22:00,Saturday,1,22,Bus Stand Area,200,56,144,28.08,Cloudy,1
+2024-06-01,00:00,Saturday,1,0,Vazirabad,150,4,146,3.19,Sunny,1
+2024-03-24,20:00,Sunday,1,20,Dandapur Road,100,77,23,77.36,Sunny,1
+2024-02-19,09:00,Monday,0,9,Cidco Colony,150,123,27,82.18,Sunny,1
+2024-02-20,20:00,Tuesday,0,20,Vishnupuri Colony,200,176,24,88.1,Rainy,1
+2024-07-29,20:00,Monday,0,20,Vidhyanagar,150,144,6,96.06,Cloudy,0
+2024-09-06,15:00,Friday,0,15,Bus Stand Area,100,58,42,58.38,Rainy,1
+2024-08-08,01:00,Thursday,0,1,Taroda Naka,50,2,48,4.74,Rainy,1
+2024-05-26,08:00,Sunday,1,8,Gurudwara Road,50,42,8,85.65,Cloudy,0
+2024-08-09,09:00,Friday,0,9,Bus Stand Area,100,99,1,99.17,Rainy,0
+2024-10-22,15:00,Tuesday,0,15,Gurudwara Road,50,38,12,77.7,Rainy,1
+2024-07-19,03:00,Friday,0,3,Railway Station Road,100,10,90,10.73,Cloudy,1
+2024-08-21,20:00,Wednesday,0,20,Vidhyanagar,200,159,41,79.71,Sunny,1
+2024-01-16,22:00,Tuesday,0,22,Vishnupuri Colony,150,59,91,39.35,Rainy,1
+2024-09-08,11:00,Sunday,1,11,Shivaji Chowk,150,107,43,71.54,Sunny,1
+2024-12-03,02:00,Tuesday,0,2,Vazirabad,200,38,162,19.12,Cloudy,1
+2024-12-08,12:00,Sunday,1,12,Shivaji Chowk,150,82,68,54.81,Sunny,1
+2024-08-11,19:00,Sunday,1,19,Shivaji Chowk,50,42,8,85.11,Rainy,0
+2024-04-12,21:00,Friday,0,21,Vidhyanagar,50,11,39,22.45,Cloudy,1
+2024-06-25,14:00,Tuesday,0,14,Taroda Naka,200,133,67,66.6,Rainy,1
+2024-07-05,00:00,Friday,0,0,Taroda Naka,100,19,81,19.93,Cloudy,1
+2024-05-26,20:00,Sunday,1,20,Shivaji Chowk,200,187,13,93.86,Rainy,1
+2024-06-07,06:00,Friday,0,6,Bus Stand Area,150,30,120,20.36,Sunny,1
+2024-10-25,12:00,Friday,0,12,Shivaji Chowk,150,82,68,54.81,Rainy,1
+2024-07-08,19:00,Monday,0,19,Naag Maidan,100,73,27,73.55,Sunny,1
+2024-06-02,09:00,Sunday,1,9,Bazar Ward,150,126,24,84.14,Rainy,1
+2024-12-01,10:00,Sunday,1,10,Cidco Colony,50,35,15,71.7,Sunny,1
+2024-09-26,22:00,Thursday,0,22,Vidhyanagar,50,19,31,38.25,Rainy,1
+2024-01-26,22:00,Friday,0,22,Railway Station Road,100,49,51,49.53,Cloudy,1
+2024-08-01,08:00,Thursday,0,8,Cidco Colony,100,85,15,85.59,Sunny,1
+2024-03-10,14:00,Sunday,1,14,Vazirabad,150,90,60,60.43,Sunny,1
+2024-10-11,19:00,Friday,0,19,Shivaji Market,50,37,13,75.94,Cloudy,1
+2024-04-10,17:00,Wednesday,0,17,Naag Maidan,100,75,25,75.38,Rainy,1
+2024-06-24,20:00,Monday,0,20,Shivaji Chowk,50,43,7,86.63,Sunny,0
+2024-11-27,13:00,Wednesday,0,13,Taroda Naka,150,113,37,75.9,Sunny,1
+2024-04-11,08:00,Thursday,0,8,Bazar Ward,200,180,20,90.09,Sunny,1
+2024-12-15,22:00,Sunday,1,22,Gurudwara Road,100,28,72,28.27,Rainy,1
+2024-11-16,10:00,Saturday,1,10,Taroda Naka,150,142,8,94.95,Sunny,0
+2024-04-09,09:00,Tuesday,0,9,Hadgaon Road,50,47,3,94.33,Sunny,0
+2024-01-18,20:00,Thursday,0,20,Naag Maidan,200,172,28,86.28,Rainy,1
+2024-08-21,11:00,Wednesday,0,11,Cidco Colony,150,141,9,94.16,Rainy,0
+2024-06-30,10:00,Sunday,1,10,Bus Stand Area,150,147,3,98.61,Rainy,0
+2024-02-09,03:00,Friday,0,3,Taroda Naka,50,8,42,17.69,Rainy,1
+2024-04-13,14:00,Saturday,1,14,Kasturba Hospital Area,50,28,22,57.74,Sunny,1
+2024-01-21,19:00,Sunday,1,19,Vishnupuri Colony,50,42,8,85.75,Cloudy,0
+2024-03-13,00:00,Wednesday,0,0,Shivaji Market,100,15,85,15.67,Rainy,1
+2024-10-12,02:00,Saturday,1,2,Railway Station Road,100,11,89,11.81,Rainy,1
+2024-09-04,04:00,Wednesday,0,4,Railway Station Road,100,7,93,7.48,Rainy,1
+2024-08-17,18:00,Saturday,1,18,Dandapur Road,150,127,23,85.32,Sunny,1
+2024-05-13,19:00,Monday,0,19,Railway Station Road,50,39,11,79.37,Rainy,1
+2024-08-14,11:00,Wednesday,0,11,Shivaji Chowk,100,72,28,72.14,Cloudy,1
+2024-11-10,16:00,Sunday,1,16,Railway Station Road,100,59,41,59.28,Cloudy,1
+2024-08-22,10:00,Thursday,0,10,Vazirabad,200,164,36,82.49,Cloudy,1
+2024-04-18,07:00,Thursday,0,7,Bazar Ward,50,20,30,40.56,Cloudy,1
+2024-10-27,13:00,Sunday,1,13,Gurudwara Road,200,152,48,76.18,Rainy,1
+2024-11-16,21:00,Saturday,1,21,Gurudwara Road,150,48,102,32.59,Rainy,1
+2024-05-06,18:00,Monday,0,18,Hadgaon Road,50,36,14,72.94,Rainy,1
+2024-03-28,14:00,Thursday,0,14,Bus Stand Area,200,149,51,74.9,Rainy,1
+2024-08-06,08:00,Tuesday,0,8,Bazar Ward,150,141,9,94.52,Sunny,0
+2024-05-11,04:00,Saturday,1,4,Naag Maidan,100,7,93,7.94,Rainy,1
+2024-09-06,07:00,Friday,0,7,Naag Maidan,50,24,26,48.48,Sunny,1
+2024-02-24,04:00,Saturday,1,4,Kasturba Hospital Area,50,8,42,16.84,Cloudy,1
+2024-09-12,14:00,Thursday,0,14,Vishnupuri Colony,150,113,37,75.99,Sunny,1
+2024-03-01,06:00,Friday,0,6,Kasturba Hospital Area,50,13,37,26.46,Cloudy,1
+2024-08-24,07:00,Saturday,1,7,Dandapur Road,150,56,94,37.96,Rainy,1
+2024-08-30,18:00,Friday,0,18,Kasturba Hospital Area,100,77,23,77.58,Cloudy,1
+2024-03-17,20:00,Sunday,1,20,Shivaji Market,200,179,21,89.99,Rainy,1
+2024-03-26,17:00,Tuesday,0,17,Vazirabad,100,90,10,90.86,Rainy,0
+2024-05-02,00:00,Thursday,0,0,Vazirabad,50,4,46,9.33,Sunny,1
+2024-05-29,07:00,Wednesday,0,7,Bus Stand Area,100,37,63,37.28,Rainy,1
+2024-02-26,06:00,Monday,0,6,Taroda Naka,50,11,39,23.7,Sunny,1
+2024-04-15,09:00,Monday,0,9,Kasturba Hospital Area,50,46,4,92.71,Sunny,0
+2024-10-09,06:00,Wednesday,0,6,Vishnupuri Colony,50,11,39,22.96,Rainy,1
+2024-12-08,09:00,Sunday,1,9,Naag Maidan,50,35,15,71.01,Cloudy,1
+2024-09-29,05:00,Sunday,1,5,Dandapur Road,50,7,43,14.82,Rainy,1
+2024-05-26,02:00,Sunday,1,2,Dandapur Road,150,20,130,13.5,Cloudy,1
+2024-08-14,12:00,Wednesday,0,12,Railway Station Road,200,101,99,50.77,Sunny,1
+2024-07-08,10:00,Monday,0,10,Vishnupuri Colony,100,82,18,82.06,Sunny,1
+2024-12-18,01:00,Wednesday,0,1,Railway Station Road,200,2,198,1.27,Cloudy,1
+2024-04-13,02:00,Saturday,1,2,Shivaji Chowk,50,5,45,11.58,Rainy,1
+2024-10-07,20:00,Monday,0,20,Vishnupuri Colony,100,93,7,93.43,Cloudy,0
+2024-11-19,00:00,Tuesday,0,0,Shivaji Market,200,34,166,17.16,Cloudy,1
+2024-12-19,18:00,Thursday,0,18,Dandapur Road,150,123,27,82.56,Sunny,1
+2024-06-05,19:00,Wednesday,0,19,Shivaji Chowk,150,127,23,84.79,Rainy,1
+2024-10-12,21:00,Saturday,1,21,Bazar Ward,100,32,68,32.9,Cloudy,1
+2024-12-17,02:00,Tuesday,0,2,Bus Stand Area,50,3,47,7.09,Cloudy,1
+2024-09-14,01:00,Saturday,1,1,Vidhyanagar,100,8,92,8.2,Cloudy,1
+2024-06-18,21:00,Tuesday,0,21,Railway Station Road,100,33,67,33.08,Sunny,1
+2024-07-22,03:00,Monday,0,3,Cidco Colony,200,38,162,19.05,Cloudy,1
+2024-06-20,00:00,Thursday,0,0,Vishnupuri Colony,150,8,142,5.79,Sunny,1
+2024-12-25,09:00,Wednesday,0,9,Vishnupuri Colony,100,85,15,85.37,Cloudy,1
+2024-04-16,15:00,Tuesday,0,15,Shivaji Chowk,100,62,38,62.65,Rainy,1
+2024-04-04,01:00,Thursday,0,1,Bus Stand Area,100,5,95,5.8,Rainy,1
+2024-06-03,01:00,Monday,0,1,Bazar Ward,150,1,149,1.22,Cloudy,1
+2024-09-02,04:00,Monday,0,4,Hadgaon Road,150,2,148,1.4,Sunny,1
+2024-10-17,01:00,Thursday,0,1,Cidco Colony,150,15,135,10.02,Cloudy,1
+2024-08-18,20:00,Sunday,1,20,Vidhyanagar,100,75,25,75.3,Sunny,1
+2024-04-02,04:00,Tuesday,0,4,Cidco Colony,200,34,166,17.09,Cloudy,1
+2024-02-06,01:00,Tuesday,0,1,Gurudwara Road,150,17,133,11.73,Sunny,1
+2024-12-05,14:00,Thursday,0,14,Naag Maidan,200,128,72,64.16,Rainy,1
+2024-10-18,15:00,Friday,0,15,Vazirabad,200,135,65,67.7,Sunny,1
+2024-06-06,10:00,Thursday,0,10,Vishnupuri Colony,100,82,18,82.75,Cloudy,1
+2024-01-20,13:00,Saturday,1,13,Shivaji Market,200,143,57,71.95,Sunny,1
+2024-02-16,04:00,Friday,0,4,Dandapur Road,150,26,124,17.76,Cloudy,1
+2024-05-16,10:00,Thursday,0,10,Taroda Naka,150,140,10,93.7,Rainy,0
+2024-03-27,03:00,Wednesday,0,3,Shivaji Market,200,24,176,12.23,Rainy,1
+2024-10-03,03:00,Thursday,0,3,Shivaji Market,50,6,44,12.84,Sunny,1
+2024-10-05,11:00,Saturday,1,11,Kasturba Hospital Area,150,111,39,74.01,Sunny,1
+2024-03-14,23:00,Thursday,0,23,Vazirabad,200,36,164,18.31,Cloudy,1
+2024-08-18,14:00,Sunday,1,14,Kasturba Hospital Area,100,52,48,52.24,Sunny,1
+2024-10-25,15:00,Friday,0,15,Cidco Colony,200,134,66,67.49,Cloudy,1
+2024-04-22,10:00,Monday,0,10,Gurudwara Road,150,148,2,99.21,Rainy,0
+2024-04-22,19:00,Monday,0,19,Vazirabad,150,146,4,98.0,Sunny,0
+2024-07-12,00:00,Friday,0,0,Vishnupuri Colony,100,19,81,19.14,Sunny,1
+2024-08-13,11:00,Tuesday,0,11,Kasturba Hospital Area,50,47,3,95.3,Sunny,0
+2024-06-10,07:00,Monday,0,7,Shivaji Chowk,200,49,151,24.59,Sunny,1
+2024-01-25,10:00,Thursday,0,10,Gurudwara Road,100,93,7,93.9,Sunny,0
+2024-05-21,21:00,Tuesday,0,21,Cidco Colony,200,98,102,49.04,Sunny,1
+2024-03-19,21:00,Tuesday,0,21,Shivaji Market,150,33,117,22.48,Rainy,1
+2024-08-22,17:00,Thursday,0,17,Shivaji Chowk,150,139,11,92.78,Cloudy,1
+2024-07-17,20:00,Wednesday,0,20,Cidco Colony,150,116,34,77.51,Sunny,1
+2024-07-03,02:00,Wednesday,0,2,Kasturba Hospital Area,150,19,131,12.91,Sunny,1
+2024-12-26,11:00,Thursday,0,11,Vidhyanagar,50,36,14,72.03,Sunny,1
+2024-09-28,16:00,Saturday,1,16,Bazar Ward,200,138,62,69.41,Sunny,1
+2024-08-04,08:00,Sunday,1,8,Vishnupuri Colony,50,43,7,87.69,Sunny,0
+2024-02-09,23:00,Friday,0,23,Cidco Colony,200,18,182,9.24,Sunny,1
+2024-07-16,04:00,Tuesday,0,4,Bus Stand Area,50,3,47,6.65,Rainy,1
+2024-03-19,21:00,Tuesday,0,21,Railway Station Road,150,73,77,49.01,Rainy,1
+2024-08-03,02:00,Saturday,1,2,Kasturba Hospital Area,150,28,122,18.87,Rainy,1
+2024-02-23,07:00,Friday,0,7,Bazar Ward,150,59,91,39.83,Cloudy,1
+2024-11-13,00:00,Wednesday,0,0,Railway Station Road,200,22,178,11.11,Sunny,1
+2024-09-20,23:00,Friday,0,23,Kasturba Hospital Area,200,6,194,3.35,Sunny,1
+2024-06-05,12:00,Wednesday,0,12,Bus Stand Area,50,32,18,64.61,Sunny,1
+2024-08-16,16:00,Friday,0,16,Kasturba Hospital Area,150,92,58,61.59,Cloudy,1
+2024-11-11,22:00,Monday,0,22,Kasturba Hospital Area,200,96,104,48.09,Sunny,1
+2024-04-04,09:00,Thursday,0,9,Dandapur Road,100,98,2,98.2,Sunny,0
+2024-08-03,10:00,Saturday,1,10,Vidhyanagar,100,76,24,76.76,Rainy,1
+2024-07-08,02:00,Monday,0,2,Railway Station Road,50,6,44,12.75,Rainy,1
+2024-04-21,21:00,Sunday,1,21,Gurudwara Road,150,54,96,36.58,Rainy,1
+2024-09-22,20:00,Sunday,1,20,Shivaji Chowk,200,194,6,97.03,Sunny,0
+2024-02-10,04:00,Saturday,1,4,Vishnupuri Colony,200,7,193,3.9,Cloudy,1
+2024-08-06,13:00,Tuesday,0,13,Vishnupuri Colony,50,27,23,55.08,Sunny,1
+2024-01-02,13:00,Tuesday,0,13,Shivaji Market,200,136,64,68.3,Sunny,1
+2024-01-19,00:00,Friday,0,0,Hadgaon Road,50,2,48,4.15,Cloudy,1
+2024-02-07,14:00,Wednesday,0,14,Gurudwara Road,150,97,53,64.95,Cloudy,1
+2024-09-06,11:00,Friday,0,11,Shivaji Chowk,100,89,11,89.63,Rainy,1
+2024-09-25,14:00,Wednesday,0,14,Vishnupuri Colony,50,28,22,57.88,Sunny,1
+2024-06-04,16:00,Tuesday,0,16,Naag Maidan,200,148,52,74.04,Rainy,1
+2024-08-27,08:00,Tuesday,0,8,Dandapur Road,200,163,37,81.91,Rainy,1

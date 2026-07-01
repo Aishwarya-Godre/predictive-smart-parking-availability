@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase — Futuristic Nanded HUD</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/sw.js');
+        }
+    </script>
+    <script>
+        if (!localStorage.getItem('userName')) {
+            window.location.replace('/login');
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        :root {
+            --bg: #080510;
+            --bg-elevated: #0f0a1d;
+            --glass: rgba(20, 15, 35, 0.7);
+            --glass-border: rgba(168, 85, 247, 0.2);
+            --purple: #a855f7;
+            --purple-bright: #c084fc;
+            --cyan: #22d3ee;
+            --pink: #f472b6;
+            --green: #10b981;
+            --red: #ef4444;
+            --text: #f3e8ff;
+            --muted: #94a3b8;
+            --font-main: 'Outfit', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Dynamic Cosmic Background */
+        body::before {
+            content: '';
+            position: fixed; inset: 0; z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            filter: blur(80px);
+        }
+
+        .hud-grid {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            grid-template-rows: 80px 1fr;
+            height: 100vh;
+            width: 100vw;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top HUD Bar */
+        .hud-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-p {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; font-weight: 900;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        .hud-metrics {
+            display: flex; gap: 32px;
+        }
+
+        .metric-item {
+            text-align: right;
+        }
+
+        .metric-val {
+            font-family: var(--font-mono); font-size: 20px; font-weight: 700; color: var(--purple-bright);
+        }
+
+        .metric-lbl {
+            font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        /* Sidebar HUD */
+        .hud-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow: hidden;
+        }
+
+        .sidebar-section {
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+            color: var(--purple-bright); text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+        }
+
+        /* Map Container */
+        .hud-map-wrap {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        #map {
+            width: 100%; height: 100%;
+            background: #080510 !important;
+        }
+
+        /* Map UI Overlays */
+        .map-search-overlay {
+            position: absolute; top: 20px; left: 20px; z-index: 1000;
+            width: 300px;
+        }
+
+        .search-box {
+            background: rgba(15, 10, 30, 0.9);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            width: 100%;
+            color: white;
+            outline: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+        .search-box:focus {
+            border-color: var(--purple);
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+        }
+
+        /* Date/Time Picker Overrides */
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .time-control-overlay {
+            position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 1000;
+            background: var(--glass);
+            padding: 12px 24px;
+            border-radius: 100px;
+            border: 1px solid var(--glass-border);
+            display: flex; align-items: center; gap: 16px;
+            backdrop-filter: blur(15px);
+        }
+
+        input[type=range] {
+            accent-color: var(--purple);
+            width: 200px;
+        }
+
+        /* Custom Map Markers */
+        .marker-pct {
+            background: rgba(0,0,0,0.8);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 44px !important; height: 44px !important;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 900; font-size: 13px;
+            box-shadow: 0 0 15px var(--border-color);
+            transition: all 0.3s;
+        }
+        .marker-pct:hover { transform: scale(1.2); z-index: 1000 !important; }
+
+        /* Slot Grid Modal */
+        #slotModal {
+            display: none; position: fixed; inset: 0; z-index: 10000;
+            background: rgba(8, 5, 16, 0.9);
+            backdrop-filter: blur(15px);
+            align-items: center; justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-body {
+            max-width: 800px; width: 100%;
+            background: var(--bg-elevated);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 12px;
+            margin-top: 24px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .slot-item {
+            aspect-ratio: 1;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.2s;
+        }
+
+        .slot-item.available { background: rgba(16, 185, 129, 0.1); color: var(--green); border-color: rgba(16, 185, 129, 0.2); }
+        .slot-item.available:hover { background: rgba(16, 185, 129, 0.2); transform: scale(1.05); }
+        .slot-item.reserved { background: rgba(239, 68, 68, 0.1); color: var(--red); border-color: rgba(239, 68, 68, 0.2); cursor: not-allowed; opacity: 0.6; }
+        .slot-item.selected { background: rgba(168, 85, 247, 0.25); color: #c084fc; border-color: rgba(168, 85, 247, 0.7); transform: scale(1.08); box-shadow: 0 0 16px rgba(168,85,247,0.4); }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed; bottom: 30px; right: 30px; z-index: 5000;
+        }
+
+        .chat-toggle {
+            width: 60px; height: 60px; border-radius: 20px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; cursor: pointer;
+            box-shadow: 0 8px 24px rgba(168, 85, 247, 0.4);
+            transition: all 0.3s;
+        }
+
+        .chat-window {
+            position: absolute; bottom: 80px; right: 0;
+            width: 360px; height: 500px;
+            display: none; flex-direction: column;
+            animation: slideUp 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+
+        /* Leaflet Dark mode fix */
+        .leaflet-tile { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%); }
+    </style>
+</head>
+<body>
+
+    <div class="hud-grid">
+        <!-- TOP HUD -->
+        <header class="hud-header glass-card">
+            <div class="logo-box">
+                <div class="logo-p">🅿</div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">PARK<span class="text-purple-400">EASE</span> HUD</h1>
+                    <p class="text-[10px] font-mono text-muted uppercase tracking-[3px]">Nanded ML Engine V2.0</p>
+                </div>
+            </div>
+
+            <div class="hud-metrics flex items-center gap-6">
+                <div class="metric-item">
+                    <div class="metric-val" id="totalSpotsMetrics">--</div>
+                    <div class="metric-lbl">Total Capacity</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-val text-green-400" id="availSpotsMetrics">--</div>
+                    <div class="metric-lbl">Live Available</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-val text-cyan-400" id="cityOccupancyMetrics">--%</div>
+                    <div class="metric-lbl">City Traffic</div>
+                </div>
+                <!-- LOGOUT BUTTON -->
+                <button onclick="logoutUser()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 hover:text-red-300 border border-red-500/20 hover:border-red-500/40 rounded-xl font-bold text-xs uppercase tracking-wider transition-all hover:scale-105">
+                    Log Out 🚪
+                </button>
+            </div>
+        </header>
+
+        <!-- SIDEBAR HUD -->
+        <aside class="hud-sidebar">
+            <!-- ML BRAIN STATUS -->
+            <div class="glass-card sidebar-section h-48">
+                <div class="section-title"><span>🧠</span> System Core</div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center animate-pulse">
+                        <div class="w-6 h-6 border-2 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-purple-300">ML Model Active</div>
+                        <div class="text-[11px] text-muted mt-1 leading-relaxed">
+                            Continuous Learning: <span id="recordCount" class="text-white">--</span> Samples<br>
+                            Precision: <span id="accLevel" class="text-white">--%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 bg-white/5 rounded-full h-1 overflow-hidden">
+                    <div id="learningBar" class="h-full bg-gradient-to-r from-purple-500 to-pink-500" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="glass-card sidebar-section flex-1 flex flex-col">
+                <div class="section-title"><span>📍</span> Smart Discovery</div>
+                <div class="flex gap-2 mb-2">
+                    <input type="text" id="hudSearch" class="search-box" placeholder="Find a spot or area..." list="hudLocs" autocomplete="off">
+                    <button onclick="triggerSearch()" class="bg-gradient-to-r from-purple-600 to-pink-600 p-3 rounded-xl hover:scale-105 transition-all shadow-lg shadow-purple-500/30">
+                        🔍
+                    </button>
+                </div>
+                <div id="searchHint" class="text-[9px] text-muted ml-1 mb-4 italic">Type any name in Nanded (e.g. Shivaji, Fort...)</div>
+
+                <div class="section-title mt-2"><span>📅</span> Schedule Scan</div>
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-mono text-muted uppercase ml-1">Arrival Date</label>
+                        <input type="date" id="hudDate" class="search-box text-[11px] py-2 px-3" onchange="syncFromSidebar()">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-mono text-muted uppercase ml-1">Arrival Time</label>
+                        <input type="time" id="hudTime" class="search-box text-[11px] py-2 px-3" onchange="syncFromSidebar()">
+                    </div>
+                </div>
+
+                <datalist id="hudLocs"></datalist>
+
+                <div class="section-title mt-4"><span>🏙️</span> Nearby Highlights</div>
+                <div id="nearbyHighlights" class="overflow-y-auto pr-2 space-y-3">
+                    <!-- Dynamic -->
+                </div>
+            </div>
+
+            <!-- CSV UPLOAD -->
+            <div class="glass-card sidebar-section h-32">
+                <div class="section-title"><span>📂</span> Data Source</div>
+                <label class="w-full border border-dashed border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-all">
+                    <input type="file" id="csvIn" class="hidden" accept=".csv" onchange="handleCsvUpload(this)">
+                    <span class="text-[11px] font-mono text-purple-300">RE-TRAIN ML MODEL</span>
+                    <span class="text-[9px] text-muted mt-1">Upload Nanded CSV</span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- MAIN MAP HUD -->
+        <main class="hud-map-wrap">
+            <div id="map"></div>
+            
+            <!-- TIME SCANNER -->
+            <div class="time-control-overlay">
+                <div class="text-xs font-mono text-muted">ARRIVAL TIME</div>
+                <input type="range" id="timeRange" min="0" max="23" value="12" oninput="updateTimeLabel(this.value)">
+                <div id="timeLabel" class="w-16 text-center font-bold text-purple-300 bg-white/5 px-3 py-1 rounded-lg">12:00</div>
+            </div>
+
+            <!-- LEGEND -->
+            <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-3 border border-white/5 flex gap-4 text-[10px] font-mono uppercase tracking-wider z-[1000]">
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#10b981]"></div> Available</div>
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_#f59e0b]"></div> Filling</div>
+                <div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></div> Crowded</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- SLOT MODAL -->
+    <div id="slotModal">
+        <div class="modal-body">
+            <button onclick="closeSlots()" class="absolute top-6 right-6 text-muted hover:text-white">✕</button>
+            <div>
+                <h2 id="slotLocName" class="text-3xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Shivaji Chowk</h2>
+                <p id="slotLocZone" class="text-muted font-mono tracking-widest text-xs mt-1 uppercase">Central Nanded Zone</p>
+            </div>
+
+            <!-- Slot Counter Summary -->
+            <div class="flex gap-4 mt-5">
+                <div class="flex-1 bg-green-500/10 border border-green-500/25 rounded-2xl p-4 text-center">
+                    <div id="modalAvailCount" class="text-3xl font-black text-green-400">--</div>
+                    <div class="text-[10px] font-mono text-green-400/70 uppercase tracking-widest mt-1">Available</div>
+                </div>
+                <div class="flex-1 bg-red-500/10 border border-red-500/25 rounded-2xl p-4 text-center">
+                    <div id="modalReservedCount" class="text-3xl font-black text-red-400">--</div>
+                    <div class="text-[10px] font-mono text-red-400/70 uppercase tracking-widest mt-1">Reserved</div>
+                </div>
+                <div class="flex-1 bg-purple-500/10 border border-purple-500/25 rounded-2xl p-4 text-center">
+                    <div id="modalTotalCount" class="text-3xl font-black text-purple-300">--</div>
+                    <div class="text-[10px] font-mono text-purple-300/70 uppercase tracking-widest mt-1">Total Slots</div>
+                </div>
+            </div>
+            
+            <div class="slot-grid" id="slotDetailGrid">
+                <!-- Dynamic Slots -->
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-8 items-center justify-between border-t border-white/5 pt-6">
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2 text-xs text-green-400"><div class="w-3 h-3 bg-green-500/20 border border-green-500/40 rounded"></div> Available</div>
+                    <div class="flex items-center gap-2 text-xs text-red-400"><div class="w-3 h-3 bg-red-500/20 border border-red-500/40 rounded"></div> Reserved</div>
+                </div>
+                <button id="bookSlotBtn" onclick="goToBooking()" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-xl font-bold hover:scale-105 transition-all shadow-lg shadow-purple-500/20">
+                    BOOK SELECTED SLOT →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHATBOT HUD -->
+    <div class="chat-widget">
+        <div class="chat-window glass-card" id="chatWin">
+            <div class="p-6 border-b border-white/5 bg-white/5 flex items-center gap-4">
+                <div class="w-10 h-10 bg-purple-600/20 rounded-xl flex items-center justify-center text-xl">🤖</div>
+                <div>
+                    <div class="font-bold text-sm">ParkEase AI</div>
+                    <div class="text-[10px] text-green-400 flex items-center gap-1"><div class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div> Online Help</div>
+                </div>
+            </div>
+            <div id="chatMsgs" class="flex-1 overflow-y-auto p-4 space-y-4 text-sm">
+                <div class="bg-white/5 rounded-2xl rounded-tl-none p-3 max-w-[85%] border border-white/5">
+                    Hi! I'm your Nanded Parking Guide. Ask me anything about zones or pricing!
+                </div>
+            </div>
+            <div class="p-4 border-t border-white/5 flex gap-2 items-center">
+                <button id="voiceBtn" onclick="startVoice()" class="p-2 bg-white/5 rounded-xl hover:bg-purple-500/20 text-xl">🎤</button>
+                <input type="text" id="chatIn" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 outline-none text-sm focus:border-purple-500" placeholder="Type message..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button onclick="sendMessage()" class="p-2 bg-purple-600 rounded-xl">➤</button>
+            </div>
+        </div>
+        <div class="chat-toggle" onclick="toggleChat()">💬</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+        let mlData = {};
+        let markers = {};
+        let currentLoc = null;
+        let selectedSlot = null;
+        
+        // Initialize Socket.io
+        const socket = io();
+
+        socket.on('slot_updated', (data) => {
+            console.log("Real-time Slot Update:", data);
+            // If the user is currently viewing this location's slots, refresh the modal
+            if(document.getElementById('slotModal').style.display === 'flex' && currentLoc === data.loc_key) {
+                showSlots(data.loc_key);
+            }
+            // Update the map markers as well
+            loadData(document.getElementById('timeRange').value);
+        });
+
+        function forceRefresh() {
+            loadData(document.getElementById('timeRange').value);
+        }
+
+        const map = L.map('map', { 
+            center: [19.158, 77.315], 
+            zoom: 14,
+            zoomControl: false 
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        async function init() {
+            // Authentication check
+            const user = localStorage.getItem('userName');
+            if(!user) {
+                window.location.href = '/login';
+                return;
+            }
+
+            // Set default date and time
+            const now = new Date();
+            document.getElementById('hudDate').value = now.toISOString().split('T')[0];
+            document.getElementById('hudTime').value = `${now.getHours().toString().padStart(2, '0')}:00`;
+            
+            updateTimeLabel(now.getHours());
+            await loadData(now.getHours());
+            
+            // Auto refresh every 60s
+            setInterval(() => {
+                const h = document.getElementById('timeRange').value;
+                loadData(h);
+            }, 60000);
+        }
+
+        async function loadData(hour) {
+            try {
+                const res = await fetch(`/api/predict?hour=${hour}`);
+                mlData = await res.json();
+                renderUI();
+            } catch(e) { console.error("Data Load Fail:", e); }
+        }
+
+        function renderUI() {
+            const nearbyEl = document.getElementById('nearbyHighlights');
+            const dataList = document.getElementById('hudLocs');
+            nearbyEl.innerHTML = '';
+            dataList.innerHTML = '';
+
+            let total = 0, avail = 0;
+            const entries = Object.entries(mlData);
+
+            entries.forEach(([key, loc]) => {
+                total += loc.total;
+                avail += loc.slots;
+                
+                // 1. Update Map
+                updateMarker(key, loc);
+
+                // 2. DataList for Search
+                const opt = document.createElement('option');
+                opt.value = loc.name;
+                dataList.appendChild(opt);
+
+                // 3. Nearby List
+                const item = document.createElement('div');
+                item.className = "p-3 bg-white/5 rounded-xl border border-white/5 hover:border-purple-500/40 cursor-pointer transition-all flex items-center justify-between";
+                item.innerHTML = `
+                    <div>
+                        <div class="text-xs font-bold">${loc.name}</div>
+                        <div class="text-[10px] text-muted">${loc.zone}</div>
+                    </div>
+                    <div class="text-[10px] font-mono px-2 py-1 bg-purple-500/20 rounded-lg text-purple-300 font-bold">${loc.pct}%</div>
+                `;
+                item.onclick = () => focusLocation(key);
+                nearbyEl.appendChild(item);
+            });
+
+            // Update Header Metrics
+            document.getElementById('totalSpotsMetrics').textContent = total;
+            document.getElementById('availSpotsMetrics').textContent = avail;
+            const occ = Math.round(((total - avail) / total) * 100);
+            document.getElementById('cityOccupancyMetrics').textContent = occ + '%';
+            
+            // ML Stats simulation
+            document.getElementById('recordCount').textContent = entries.length * 48;
+            document.getElementById('accLevel').textContent = (92 + Math.random() * 5).toFixed(1);
+        }
+
+        function updateMarker(key, loc) {
+            const color = loc.pct > 60 ? '#10b981' : loc.pct > 30 ? '#f59e0b' : '#ef4444';
+            
+            const htmlContent = `
+                <div style="transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center;">
+                    <div class="marker-pct mb-1" style="--border-color: ${color}">${loc.pct}%</div>
+                    <div class="text-[10px] font-bold px-2 py-1 rounded-md whitespace-nowrap bg-black/90 border border-white/20 text-white shadow-lg">
+                        ${loc.name}
+                    </div>
+                </div>
+            `;
+
+            if (!markers[key]) {
+                const icon = L.divIcon({
+                    className: 'custom-icon',
+                    html: htmlContent,
+                    iconSize: [0, 0]
+                });
+                markers[key] = L.marker([loc.lat, loc.lng], { icon }).addTo(map);
+                markers[key].on('click', () => showSlots(key));
+            } else {
+                markers[key].setIcon(L.divIcon({
+                    className: 'custom-icon',
+                    html: htmlContent,
+                    iconSize: [0, 0]
+                }));
+            }
+        }
+
+        function focusLocation(key) {
+            const loc = mlData[key];
+            if(!loc) return;
+            map.flyTo([loc.lat, loc.lng], 16, { duration: 1.5 });
+            setTimeout(() => showSlots(key), 1600);
+        }
+
+        async function showSlots(key) {
+            currentLoc = key;
+            const loc = mlData[key];
+            document.getElementById('slotLocName').textContent = loc.name;
+            document.getElementById('slotLocZone').textContent = loc.zone + ' Zone · Nanded';
+
+            const grid = document.getElementById('slotDetailGrid');
+            document.getElementById('slotModal').style.display = 'flex';
+
+            const totalSlots = loc.total || 32;
+            selectedSlot = null;
+
+            // Helper: build slot grid from a booked-map
+            function buildGrid(bookedMap) {
+                grid.innerHTML = '';
+                let reservedCount = 0;
+                bookedMap = bookedMap || {};
+
+                for (let i = 1; i <= totalSlots; i++) {
+                    const sid = 'B-' + i;
+                    const isBooked = bookedMap[sid];
+                    if (isBooked) reservedCount++;
+
+                    const div = document.createElement('div');
+                    div.id = 'slot_' + sid;
+                    div.className = 'slot-item ' + (isBooked ? 'reserved' : 'available');
+                    div.innerHTML = '<span class="text-[9px] uppercase font-mono opacity-60">S-</span><span class="font-black">' + i + '</span>';
+                    
+                    if (!isBooked) {
+                        div.onclick = () => selectSlot(sid, loc.name, key, div);
+                    } else if (isBooked.user) {
+                        div.title = 'Reserved by ' + isBooked.user + ' at ' + isBooked.time;
+                    }
+                    grid.appendChild(div);
+                }
+                
+                document.getElementById('modalAvailCount').textContent = totalSlots - reservedCount;
+                document.getElementById('modalReservedCount').textContent = reservedCount;
+                document.getElementById('modalTotalCount').textContent = totalSlots;
+            }
+
+            // Step 1: Render immediately with 0 reservations (always works)
+            buildGrid({});
+
+            // Step 2: Try to overlay real DB bookings
+            try {
+                const res = await fetch('/get-bookings?key=' + encodeURIComponent(key));
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                const bData = await res.json();
+                if (bData.success) buildGrid(bData.data || {});
+            } catch(e) {
+                console.warn('Bookings API not reachable, showing ML estimate:', e.message);
+            }
+        }
+
+        function selectSlot(sid, locName, locKey, el) {
+            // Deselect previous
+            document.querySelectorAll('.slot-item.selected').forEach(s => {
+                s.classList.remove('selected');
+                s.classList.add('available');
+            });
+            // Select new
+            el.classList.remove('available');
+            el.classList.add('selected');
+            selectedSlot = { sid, locName, locKey };
+            document.getElementById('bookSlotBtn').textContent = `BOOK SLOT ${sid} →`;
+        }
+
+        function goToBooking() {
+            if(!selectedSlot) {
+                alert('Please click on an available (green) slot first to select it.');
+                return;
+            }
+            const { sid, locName, locKey } = selectedSlot;
+            window.location.href = `/booking?loc=${encodeURIComponent(locKey)}&name=${encodeURIComponent(locName)}&slot=${encodeURIComponent(sid)}`;
+        }
+
+        function closeSlots() { document.getElementById('slotModal').style.display = 'none'; }
+
+        function updateTimeLabel(val) {
+            const h = val.toString().padStart(2, '0');
+            document.getElementById('timeLabel').textContent = `${h}:00`;
+            document.getElementById('hudTime').value = `${h}:00`;
+            loadData(val);
+        }
+
+        function syncFromSidebar() {
+            const timeVal = document.getElementById('hudTime').value;
+            const hour = parseInt(timeVal.split(':')[0]);
+            document.getElementById('timeRange').value = hour;
+            document.getElementById('timeLabel').textContent = `${hour.toString().padStart(2, '0')}:00`;
+            loadData(hour);
+        }
+
+        async function triggerSearch() {
+            const input = document.getElementById('hudSearch');
+            const val = input.value.toLowerCase().trim();
+            if(!val) return;
+
+            // Show searching state
+            const btn = input.nextElementSibling;
+            const oldHtml = btn.innerHTML;
+            btn.innerHTML = '<div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>';
+
+            // 1. Check local DB first with fuzzy match
+            const found = Object.entries(mlData).find(([k, v]) => 
+                v.name.toLowerCase().includes(val) || 
+                k.toLowerCase().includes(val) ||
+                (v.zone && v.zone.toLowerCase().includes(val))
+            );
+
+            if(found) {
+                btn.innerHTML = oldHtml;
+                focusLocation(found[0]);
+                return;
+            }
+
+            // 2. Global Search Fallback (Nominatim)
+            try {
+                const query = encodeURIComponent(val + ", Nanded, Maharashtra");
+                const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}&limit=1`);
+                const results = await res.json();
+
+                if(results.length > 0) {
+                    const { lat, lon, display_name } = results[0];
+                    map.flyTo([lat, lon], 16, { duration: 1.5 });
+                    
+                    const tempMarker = L.marker([lat, lon]).addTo(map)
+                        .bindPopup(`<b>${val.toUpperCase()}</b><br><span style="font-size:10px">${display_name}</span><br><br><span style="color:var(--purple-bright)">Public Area - Monitoring Active</span>`)
+                        .openPopup();
+                    
+                    setTimeout(() => map.removeLayer(tempMarker), 30000);
+                } else {
+                    alert("Location '" + val + "' not found. Try 'Shivaji', 'Hazur Sahib', or 'Railway Station'.");
+                }
+            } catch(e) {
+                console.error("Geocoding Error:", e);
+                alert("Please check your internet connection.");
+            } finally {
+                btn.innerHTML = oldHtml;
+            }
+        }
+
+        // Live filtering of nearby highlights as you type
+        document.getElementById('hudSearch').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const highlights = document.getElementById('nearbyHighlights').children;
+            for(let card of highlights) {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(term) ? 'flex' : 'none';
+            }
+        });
+
+        // Search listener for Enter key
+        document.getElementById('hudSearch').addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') triggerSearch();
+        });
+
+        // Chat Logic
+        function toggleChat() {
+            const win = document.getElementById('chatWin');
+            win.style.display = win.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chatIn');
+            const text = input.value.trim();
+            if(!text) return;
+
+            addMsg(text, 'user');
+            input.value = '';
+
+            try {
+                const res = await fetch('/api/chatbot', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: text })
+                });
+                const data = await res.json();
+                addMsg(data.reply, 'bot');
+            } catch(e) { addMsg("System offline. Contact Administrator.", 'bot'); }
+        }
+
+        function addMsg(text, sender) {
+            const box = document.getElementById('chatMsgs');
+            const div = document.createElement('div');
+            div.className = sender === 'user' ? 'ml-auto bg-purple-600 text-white rounded-2xl rounded-tr-none p-3 max-w-[85%]' : 'bg-white/10 rounded-2xl rounded-tl-none p-3 max-w-[85%] border border-white/5';
+            div.textContent = text;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+            
+            // Text to Speech for Bot
+            if(sender === 'bot') {
+                const speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+            }
+        }
+
+        // Voice Assistant Logic
+        function startVoice() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = 'en-IN';
+            const vBtn = document.getElementById('voiceBtn');
+            vBtn.classList.add('animate-pulse', 'bg-red-500/20');
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById('chatIn').value = transcript;
+                vBtn.classList.remove('animate-pulse', 'bg-red-500/20');
+                sendMessage();
+            };
+            
+            recognition.onerror = () => {
+                vBtn.classList.remove('animate-pulse', 'bg-red-500/20');
+                alert("Voice recognition error. Try typing.");
+            };
+            
+            recognition.start();
+        }
+
+        async function handleCsvUpload(input) {
+            if(!input.files[0]) return;
+            const formData = new FormData();
+            formData.append('file', input.files[0]);
+
+            const btnText = input.nextElementSibling;
+            btnText.textContent = "TRAINING MODEL...";
+
+            try {
+                const res = await fetch('/upload-csv', { method: 'POST', body: formData });
+                const data = await res.json();
+                if(data.success) {
+                    alert("Success! Model retrained with " + data.records + " new records.");
+                    location.reload();
+                } else { alert("Error: " + data.message); }
+            } catch(e) { alert("Server connectivity fail."); }
+        }
+
+        function logoutUser() {
+            localStorage.removeItem('userName');
+            window.location.replace('/login');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

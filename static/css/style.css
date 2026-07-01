@@ -1,0 +1,16 @@
+body { font-family: 'Poppins', sans-serif; background-color: #f0f4f8; margin: 20px; }
+h1 { color: #1e40af; }
+h2 { color: #334155; margin-top: 30px; }
+nav a { margin-right: 15px; text-decoration: none; color: #1e40af; font-weight: bold; }
+.slot { display: inline-block; width: 130px; height: 60px; line-height: 60px; margin: 10px; text-align: center; font-weight: bold; border-radius: 10px; color: white; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.slot:hover { transform: scale(1.05); }
+.available { background-color: #22c55e; } /* Green */
+.booked { background-color: #ef4444; }    /* Red */
+.prediction { margin-top: 20px; font-size: 1.3em; font-weight: bold; color: #1e40af; }
+form input, form select, form button { margin: 5px; padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
+form button { background-color: #1e40af; color: white; border: none; cursor: pointer; transition: 0.3s; }
+form button:hover { background-color: #2563eb; }
+.history-table { margin-top: 20px; border-collapse: collapse; width: 100%; }
+.history-table th, .history-table td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+.history-table th { background-color: #1e40af; color: white; }
+.chart-container { margin-top: 40px; }

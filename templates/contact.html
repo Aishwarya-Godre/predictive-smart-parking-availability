@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase — Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --bg: #0a0612;
+  --purple: #a855f7;
+  --purple2: #7c3aed;
+  --text: #f3e8ff;
+  --muted: #9874c0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: -1;
+  background: radial-gradient(circle at 80% 20%, rgba(124,58,237,0.1) 0%, transparent 80%);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 24px;
+}
+input, textarea {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+  color: white !important;
+  outline: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple2), var(--purple));
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+</style>
+</head>
+<body class="p-6 md:p-12">
+
+<nav class="max-w-7xl mx-auto flex justify-between items-center mb-16 px-4">
+  <div class="flex items-center gap-2">
+    <div class="w-8 h-8 btn-primary rounded-lg flex items-center justify-center font-bold">🅿</div>
+    <h1 class="text-xl font-black italic">ParkEase</h1>
+  </div>
+  <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-muted">
+    <a href="/" class="hover:text-purple-400">Home</a>
+    <a href="/features" class="hover:text-purple-400">Features</a>
+  </div>
+</nav>
+
+<div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+  <div class="glass p-10">
+    <h2 class="text-4xl font-black mb-6">Get in Touch</h2>
+    <p class="text-muted mb-10 text-lg">Have technical issues or business inquiries? Our team is ready to assist you with Nanded's smartest parking network.</p>
+    
+    <div class="space-y-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-xl">📍</div>
+        <div>
+          <div class="text-xs font-bold text-muted uppercase">Office</div>
+          <div class="font-bold">Nanded City, Maharashtra</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-xl">✉</div>
+        <div>
+          <div class="text-xs font-bold text-muted uppercase">Email</div>
+          <div class="font-bold">godreaishwarya@gmail.com</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center text-xl">📞</div>
+        <div>
+          <div class="text-xs font-bold text-muted uppercase">Support</div>
+          <div class="font-bold">+91 91194 75105</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass p-10">
+    <h3 class="text-2xl font-bold mb-8 text-center">Send a Message</h3>
+    <form id="contactForm" class="space-y-4">
+      <input id="name" type="text" placeholder="Your Name" class="w-full p-4 rounded-xl" required>
+      <input id="email" type="email" placeholder="Your Email" class="w-full p-4 rounded-xl" required>
+      <textarea id="message" placeholder="How can we help?" class="w-full p-4 rounded-xl h-32" required></textarea>
+      <button type="button" onclick="sendMessage()" class="w-full p-5 btn-primary rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform">
+        Send Signal 🚀
+      </button>
+      <p id="msg" class="text-center font-bold mt-4"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+function sendMessage(){
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const msgEl = document.getElementById("msg");
+
+    if(!name || !email || !message) return;
+
+    fetch("/send-message",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({name,email,message})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        if(data.success){
+            msgEl.innerText = "Message Received! We'll reply soon.";
+            msgEl.className = "text-center font-bold mt-4 text-green-400";
+            document.getElementById("contactForm").reset();
+        } else {
+            msgEl.innerText = "Error sending message.";
+            msgEl.className = "text-center font-bold mt-4 text-red-400";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

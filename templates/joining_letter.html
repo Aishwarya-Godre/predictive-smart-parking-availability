@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Letter — {{ guard.name }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; background: #f8fafc; }
+        .letter-container {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        @media print {
+            body { background: white; }
+            .letter-container { margin: 0; box-shadow: none; border: none; }
+            .no-print { display: none; }
+        }
+        @media (max-width: 768px) {
+            .no-print { display: none; }
+        }
+        .header-line { height: 4px; background: linear-gradient(90deg, #a855f7, #f472b6); }
+    </style>
+</head>
+<body>
+
+    <div class="no-print fixed top-6 right-6 flex gap-4">
+        <button onclick="window.print()" class="bg-purple-600 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:bg-purple-700 transition-all">🖨️ PRINT / DOWNLOAD PDF</button>
+        <button onclick="window.close()" class="bg-slate-800 text-white px-6 py-2 rounded-xl font-bold">CLOSE</button>
+    </div>
+
+    <div class="letter-container">
+        <!-- Letterhead -->
+        <div class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-3xl font-black tracking-tighter text-purple-600">PARKEASE<span class="text-slate-800">NANDED</span></h1>
+                <p class="text-xs font-bold text-slate-400 tracking-[3px] uppercase">Smart Parking Solutions</p>
+            </div>
+            <div class="text-right text-sm text-slate-500">
+                <p>Nanded City Municipal Corp.</p>
+                <p>Security Dept, Zone 01</p>
+                <p>Maharashtra, India</p>
+            </div>
+        </div>
+
+        <div class="header-line mb-10"></div>
+
+        <div class="text-right mb-10">
+            <p class="font-bold">Date: <span class="text-slate-600">{{ date }}</span></p>
+            <p class="text-xs text-slate-400">Ref: PE/GUARD/{{ guard.id }}/2026</p>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="text-xl font-bold underline mb-4">SUBJECT: APPOINTMENT LETTER FOR SECURITY PERSONNEL</h2>
+            <p>Dear <span class="font-bold">{{ guard.name }}</span>,</p>
+        </div>
+
+        <div class="space-y-6 text-slate-700 leading-relaxed">
+            <p>We are pleased to offer you an appointment as a <strong>Security Guard</strong> for the ParkEase Smart Parking System in Nanded. Following your registration by the administration, your profile has been officially activated.</p>
+
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <h3 class="font-bold text-slate-800 mb-4 uppercase text-sm tracking-wider">Assignment Details:</h3>
+                <table class="w-full text-sm">
+                    <tr class="border-b border-slate-200">
+                        <td class="py-2 text-slate-500">Assigned Area:</td>
+                        <td class="py-2 font-bold">{{ guard.area.upper() }}</td>
+                    </tr>
+                    <tr class="border-b border-slate-200">
+                        <td class="py-2 text-slate-500">Working Shift:</td>
+                        <td class="py-2 font-bold">{{ guard.shift }}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-slate-500">Official Joining:</td>
+                        <td class="py-2 font-bold">{{ date }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100">
+                <h3 class="font-bold text-purple-800 mb-4 uppercase text-sm tracking-wider">Security HUD Login Credentials:</h3>
+                <p class="text-xs text-purple-600 mb-2">Use these details to access the guard monitoring portal at /guard-login-page</p>
+                <table class="w-full text-sm">
+                    <tr>
+                        <td class="py-1 text-purple-700">Login ID (Email):</td>
+                        <td class="py-1 font-mono font-bold">{{ guard.email }}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-1 text-purple-700">System Password:</td>
+                        <td class="py-1 font-mono font-bold">{{ guard.password }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>Your primary responsibilities include monitoring the availability of slots in your assigned zone, verifying vehicle numbers, and utilizing the Security HUD to notify users whose parking duration has expired.</p>
+
+            <p>We look forward to your contribution in making Nanded's parking smart and efficient.</p>
+        </div>
+
+        <div class="mt-20 flex justify-between items-end">
+            <div>
+                <div class="w-40 border-b border-slate-400 mb-2"></div>
+                <p class="text-xs font-bold uppercase text-slate-500">Authorized Signature</p>
+                <p class="text-sm font-bold">ParkEase Admin Team</p>
+            </div>
+            <div class="text-right">
+                <div class="w-32 h-32 bg-slate-100 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-200 mb-2">
+                    <span class="text-[10px] text-slate-400 uppercase text-center p-2">Official Seal<br>ParkEase Nanded</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="absolute bottom-10 left-10 right-10 text-[10px] text-slate-400 text-center border-t border-slate-100 pt-4">
+            This is a computer-generated document. For verification, please contact support@parkease.com
+        </div>
+    </div>
+
+</body>
+</html>

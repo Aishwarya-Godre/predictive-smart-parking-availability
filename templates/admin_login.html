@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase — Admin Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --bg: #0a0612;
+  --purple: #a855f7;
+  --purple2: #7c3aed;
+  --text: #f3e8ff;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  display: flex; align-items: center; justify-content: center; min-height: 100vh;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: -1;
+  background: radial-gradient(circle at 50% 50%, rgba(124,58,237,0.1) 0%, transparent 80%);
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 24px;
+}
+input {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(168, 85, 247, 0.2) !important;
+  color: white !important;
+  outline: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  box-shadow: 0 4px 20px rgba(225, 29, 72, 0.4);
+}
+</style>
+</head>
+<body class="p-6">
+
+<div class="glass p-10 w-full max-w-md text-center">
+  <div class="text-4xl mb-6">🛡️</div>
+  <h2 class="text-3xl font-black italic mb-2">Admin Access</h2>
+  <p class="text-purple-300/60 mb-8">Enter your credentials to manage ParkEase</p>
+
+  <form id="adminLoginForm" class="space-y-4">
+    <input type="email" id="email" placeholder="Admin Email" class="w-full p-4 rounded-xl" required>
+    <input type="password" id="password" placeholder="Password" class="w-full p-4 rounded-xl" required>
+    <button type="submit" class="w-full p-4 btn-primary rounded-xl font-bold text-lg mt-4 hover:scale-[1.02] transition-transform text-white">
+      Log In to Admin
+    </button>
+  </form>
+
+  <div class="mt-8 text-sm">
+    Not an admin? <a href="/login" class="text-rose-400 font-bold hover:underline">User Login</a>
+  </div>
+  <p id="msg" class="mt-4 text-sm text-red-400"></p>
+</div>
+
+<script>
+document.getElementById('adminLoginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        const res = await fetch('/login-admin', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+        if(data.success) {
+            localStorage.setItem('adminAuth', 'true');
+            window.location.href = '/admin';
+        } else {
+            document.getElementById('msg').innerText = "Incorrect admin credentials";
+        }
+    } catch(err) {
+        document.getElementById('msg').innerText = "Server error";
+    }
+});
+</script>
+
+</body>
+</html>

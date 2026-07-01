@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParkEase — Advanced Features</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --bg: #0a0612;
+  --purple: #a855f7;
+  --purple2: #7c3aed;
+  --text: #f3e8ff;
+  --muted: #9874c0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+}
+.glass:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple2), var(--purple));
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+</style>
+</head>
+<body class="p-6 md:p-12">
+
+<nav class="max-w-7xl mx-auto flex justify-between items-center mb-20 px-4">
+  <div class="flex items-center gap-2">
+    <div class="w-8 h-8 btn-primary rounded-lg flex items-center justify-center font-bold">🅿</div>
+    <h1 class="text-xl font-black italic">ParkEase</h1>
+  </div>
+  <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-muted">
+    <a href="/" class="hover:text-purple-400">Home</a>
+    <a href="/contact" class="hover:text-purple-400">Contact</a>
+  </div>
+</nav>
+
+<section class="max-w-6xl mx-auto text-center mb-20">
+  <h2 class="text-5xl font-black mb-6">Future of Urban Parking</h2>
+  <p class="text-muted text-xl max-w-2xl mx-auto">Explore the technology behind ParkEase that's making parking stress-free and efficient.</p>
+</section>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">🛰</div>
+    <h3 class="text-2xl font-bold mb-4">ML Predictions</h3>
+    <p class="text-muted leading-relaxed">Our neural networks analyze years of historical data to predict availability with 98% accuracy, even during peak festive hours.</p>
+  </div>
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">🤖</div>
+    <h3 class="text-2xl font-bold mb-4">AI Assistant</h3>
+    <p class="text-muted leading-relaxed">Integrated chatbot support to help you navigate, book, and troubleshoot instantly without manual intervention.</p>
+  </div>
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">🛡</div>
+    <h3 class="text-2xl font-bold mb-4">Secure Booking</h3>
+    <p class="text-muted leading-relaxed">End-to-end encrypted slot reservations with automatic database synchronization ensures your spot is always waiting.</p>
+  </div>
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">📡</div>
+    <h3 class="text-2xl font-bold mb-4">Live IoT Feed</h3>
+    <p class="text-muted leading-relaxed">Direct integration with city-wide parking sensors provides second-by-second updates on the live dashboard.</p>
+  </div>
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">📱</div>
+    <h3 class="text-2xl font-bold mb-4">Mobile Ready</h3>
+    <p class="text-muted leading-relaxed">Fully responsive design allows you to find and book spots on the go, from any device, anywhere in the world.</p>
+  </div>
+  <div class="glass p-10">
+    <div class="text-4xl mb-6">🌍</div>
+    <h3 class="text-2xl font-bold mb-4">Eco-Friendly</h3>
+    <p class="text-muted leading-relaxed">By reducing the time spent circling for parking, we help reduce carbon emissions across Nanded City.</p>
+  </div>
+</div>
+
+<div class="text-center mt-20">
+  <a href="/signup" class="px-12 py-5 btn-primary rounded-full font-bold text-xl hover:scale-110 transition-transform inline-block">Join ParkEase Now</a>
+</div>
+
+</body>
+</html>

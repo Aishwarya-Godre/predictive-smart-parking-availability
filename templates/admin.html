@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase — Admin Control HUD</title>
+    <script>
+        if (localStorage.getItem('adminAuth') !== 'true') {
+            window.location.replace('/admin-login-page');
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg: #080510;
+            --bg-elevated: #0f0a1d;
+            --glass: rgba(20, 15, 35, 0.7);
+            --glass-border: rgba(168, 85, 247, 0.2);
+            --purple: #a855f7;
+            --purple-bright: #c084fc;
+            --pink: #f472b6;
+            --text: #f3e8ff;
+            --muted: #94a3b8;
+            --font-main: 'Outfit', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0; z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            filter: blur(80px);
+        }
+
+        .hud-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            grid-template-rows: 80px 1fr;
+            height: 100vh;
+            width: 100vw;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top HUD Bar */
+        .hud-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-p {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--purple), var(--pink));
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; font-weight: 900;
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+        }
+
+        /* Sidebar */
+        .hud-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .nav-btn {
+            width: 100%;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            transition: all 0.3s;
+            border-radius: 16px;
+            margin-bottom: 4px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(168, 85, 247, 0.1);
+            color: var(--text);
+        }
+
+        .nav-btn.active {
+            background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), transparent);
+            color: var(--purple-bright);
+            border-left: 4px solid var(--purple);
+        }
+
+        /* Main Content */
+        .hud-main {
+            overflow-y: auto;
+            padding: 32px;
+        }
+
+        .section-title {
+            font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+            color: var(--purple-bright); text-transform: uppercase; letter-spacing: 3px;
+            margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
+        }
+
+        /* Table Style */
+        .hud-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 12px;
+        }
+
+        .hud-table th {
+            text-align: left;
+            padding: 0 20px;
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hud-table td {
+            padding: 20px;
+            background: rgba(255,255,255,0.02);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hud-table td:first-child { border-left: 1px solid rgba(255,255,255,0.05); border-radius: 16px 0 0 16px; }
+        .hud-table td:last-child { border-right: 1px solid rgba(255,255,255,0.05); border-radius: 0 16px 16px 0; }
+
+        .status-pill {
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .delete-btn {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            padding: 8px;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+
+        .delete-btn:hover {
+            background: #ef4444;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="hud-grid">
+        <!-- HEADER -->
+        <header class="hud-header glass-card">
+            <div class="logo-box">
+                <div class="logo-p">🛡️</div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">ADMIN<span class="text-purple-400">HUD</span></h1>
+                    <p class="text-[10px] font-mono text-muted uppercase tracking-[3px]">ParkEase Command Center</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="/dashboard" class="text-xs font-bold text-purple-400 hover:underline">View Dashboard</a>
+                <button onclick="logout()" class="bg-white/5 border border-white/10 px-6 py-2 rounded-xl text-xs font-bold hover:bg-white/10 transition-all">TERMINATE SESSION</button>
+            </div>
+        </header>
+
+        <!-- SIDEBAR -->
+        <aside class="hud-sidebar">
+            <div class="glass-card flex-1 p-4">
+                <div class="text-[10px] font-mono text-muted uppercase tracking-widest mb-6 ml-2">Navigation</div>
+                <button onclick="showTab('analytics')" id="btn-analytics" class="nav-btn active">
+                    <span>📊</span> Analytics
+                </button>
+                <button onclick="showTab('bookings')" id="btn-bookings" class="nav-btn">
+                    <span>📅</span> Bookings
+                </button>
+                <button onclick="showTab('users')" id="btn-users" class="nav-btn">
+                    <span>👥</span> Users
+                </button>
+                <button onclick="showTab('messages')" id="btn-messages" class="nav-btn">
+                    <span>✉️</span> Messages
+                </button>
+                <button onclick="showTab('guards')" id="btn-guards" class="nav-btn">
+                    <span>👮</span> Guards
+                </button>
+                <button onclick="showTab('payments')" id="btn-payments" class="nav-btn">
+                    <span>💰</span> Payments
+                </button>
+                
+                <div class="mt-10 text-[10px] font-mono text-muted uppercase tracking-widest mb-6 ml-2">ML Control</div>
+                <button onclick="showTab('ml')" id="btn-ml" class="nav-btn">
+                    <span>🧠</span> Retrain Model
+                </button>
+            </div>
+
+            <div class="glass-card p-6 h-32 flex flex-col justify-center">
+                <div class="text-[10px] font-mono text-muted uppercase mb-2">DB Connectivity</div>
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                    <div class="text-xs font-bold text-green-400">USERS.DB ONLINE</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="hud-main glass-card">
+            
+            <!-- ANALYTICS DASHBOARD -->
+            <div id="sec-analytics" class="tab-sec">
+                <div class="section-title"><span>📊</span> Operations Overview</div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+                    <div class="glass-card p-6 bg-gradient-to-br from-purple-500/10 to-transparent">
+                        <div class="text-[10px] text-muted uppercase font-mono mb-1">Total Revenue</div>
+                        <div class="text-3xl font-black text-white">₹{{ earnings }}</div>
+                    </div>
+                    <div class="glass-card p-6 bg-gradient-to-br from-yellow-500/10 to-transparent">
+                        <div class="text-[10px] text-muted uppercase font-mono mb-1">Pending Verif.</div>
+                        <div class="text-3xl font-black text-yellow-400">{{ pending }}</div>
+                    </div>
+                    <div class="glass-card p-6 bg-gradient-to-br from-cyan-500/10 to-transparent">
+                        <div class="text-[10px] text-muted uppercase font-mono mb-1">Total Bookings</div>
+                        <div class="text-3xl font-black text-cyan-400">{{ bookings|length }}</div>
+                    </div>
+                    <div class="glass-card p-6 bg-gradient-to-br from-emerald-500/10 to-transparent">
+                        <div class="text-[10px] text-muted uppercase font-mono mb-1">Active Users</div>
+                        <div class="text-3xl font-black text-emerald-400">{{ users|length }}</div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 mb-10">
+                    <div class="section-title mb-6"><span>📈</span> Weekly Earning Pattern</div>
+                    <div class="h-64">
+                        <canvas id="earningsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- Bookings Section -->
+            <div id="sec-bookings" class="tab-sec hidden">
+                <div class="section-title"><span>📅</span> Active Reservations</div>
+                <table class="hud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Location</th>
+                            <th>Slot</th>
+                            <th>User</th>
+                            <th>Vehicle</th>
+                            <th>Duration</th>
+                            <th>Charge</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for b in bookings %}
+                        <tr id="booking-{{ b.id }}">
+                            <td class="font-mono text-purple-400">#{{ b.id }}</td>
+                            <td class="font-bold text-sm">{{ b.location }}</td>
+                            <td><span class="text-xs bg-white/5 px-2 py-1 rounded border border-white/10">{{ b.slot_id }}</span></td>
+                            <td>
+                                <div class="text-xs font-bold">{{ b.name }}</div>
+                                <div class="text-[10px] text-muted">{{ b.email }}</div>
+                            </td>
+                            <td class="font-mono text-xs">{{ b.vehicle }}</td>
+                            <td class="text-xs">{{ b.hours }} hrs</td>
+                            <td class="font-bold text-green-400">₹{{ b.charge }}</td>
+                            <td>
+                                <span class="status-pill {% if b.payment_status == 'Verified' %}bg-green-500/20 text-green-400{% elif b.payment_status == 'Rejected' %}bg-red-500/20 text-red-400{% else %}bg-yellow-500/20 text-yellow-400{% endif %}">
+                                    {{ b.payment_status }}
+                                </span>
+                            </td>
+                            <td class="text-[10px] text-muted">{{ b.time }}</td>
+                            <td>
+                                <button onclick="deleteItem('booking', {{ b.id }})" class="delete-btn">🗑️</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Payments Verification Section -->
+            <div id="sec-payments" class="tab-sec hidden">
+                <div class="section-title"><span>💰</span> Payment Verification HUD</div>
+                <table class="hud-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Vehicle</th>
+                            <th>Amount</th>
+                            <th>Screenshot</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for b in bookings if b.payment_status == 'Pending' %}
+                        <tr>
+                            <td>
+                                <div class="font-bold">{{ b.name }}</div>
+                                <div class="text-[10px] text-muted">{{ b.email }}</div>
+                            </td>
+                            <td class="font-mono text-xs">{{ b.vehicle }}</td>
+                            <td class="font-black text-purple-400">₹{{ b.charge }}</td>
+                            <td>
+                                {% if b.screenshot %}
+                                <a href="/static/uploads/{{ b.screenshot }}" target="_blank">
+                                    <img src="/static/uploads/{{ b.screenshot }}" class="w-16 h-10 object-cover rounded-lg border border-white/10 hover:scale-150 transition-all">
+                                </a>
+                                {% else %}
+                                <span class="text-xs text-muted italic">No Proof</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div class="flex gap-2">
+                                    <button onclick="verifyPayment({{ b.id }}, 'Verified')" class="bg-green-500/20 text-green-400 px-4 py-2 rounded-xl text-xs font-bold hover:bg-green-500 transition-all">APPROVE</button>
+                                    <button onclick="verifyPayment({{ b.id }}, 'Rejected')" class="bg-red-500/20 text-red-400 px-4 py-2 rounded-xl text-xs font-bold hover:bg-red-500 transition-all">REJECT</button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Users Section -->
+            <div id="sec-users" class="tab-sec hidden">
+                <div class="section-title"><span>👥</span> Registered Entities</div>
+                <table class="hud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Full Name</th>
+                            <th>Email Address</th>
+                            <th>Credentials</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for u in users %}
+                        <tr id="user-{{ u.id }}">
+                            <td class="font-mono text-purple-400">{{ u.id }}</td>
+                            <td class="font-bold text-sm">{{ u.name }}</td>
+                            <td>{{ u.email }}</td>
+                            <td class="font-mono text-xs text-muted">{{ u.password }}</td>
+                            <td>
+                                <button onclick="deleteItem('user', {{ u.id }})" class="delete-btn">🗑️</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Messages Section -->
+            <div id="sec-messages" class="tab-sec hidden">
+                <div class="section-title"><span>✉️</span> System Inquiries</div>
+                <table class="hud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Sender</th>
+                            <th>Email</th>
+                            <th>Message Content</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in messages %}
+                        <tr id="message-{{ m.id }}">
+                            <td class="font-mono text-purple-400">{{ m.id }}</td>
+                            <td class="font-bold text-sm">{{ m.name }}</td>
+                            <td>{{ m.email }}</td>
+                            <td class="text-xs italic text-muted max-w-md">{{ m.message }}</td>
+                            <td>
+                                <button onclick="deleteItem('message', {{ m.id }})" class="delete-btn">🗑️</button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Guards Section -->
+            <div id="sec-guards" class="tab-sec hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="section-title mb-0"><span>👮</span> Assigned Security Personnel</div>
+                    <button onclick="toggleGuardModal()" class="bg-purple-600 px-6 py-2 rounded-xl font-bold text-sm hover:scale-105 transition-all">+ ADD GUARD</button>
+                </div>
+                
+                <table class="hud-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Guard Name</th>
+                            <th>Email / Credentials</th>
+                            <th>Assigned Area</th>
+                            <th>Shift</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for g in guards %}
+                        <tr id="guard-{{ g.id }}">
+                            <td class="font-mono text-purple-400">#{{ g.id }}</td>
+                            <td class="font-bold text-sm">{{ g.name }}</td>
+                            <td>
+                                <div class="text-xs">{{ g.email }}</div>
+                                <div class="text-[10px] text-muted font-mono">{{ g.password }}</div>
+                            </td>
+                            <td>
+                                {% set area_key = g.area|lower %}
+                                <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20">
+                                    {{ locations[area_key].name if area_key in locations else g.area or 'Unknown Area' }}
+                                </span>
+                            </td>
+                            <td>
+                                <span class="text-xs font-bold px-3 py-1 rounded-full border border-purple-500/30">
+                                    {{ g.shift or 'N/A' }}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="flex gap-2">
+                                    <a href="/admin/view-joining-letter/{{ g.id }}" target="_blank" class="hidden md:inline-block bg-white/5 hover:bg-white/10 text-xs px-3 py-1.5 rounded-lg border border-white/10 transition-all">📄 LETTER</a>
+                                    <button onclick="deleteItem('guard', {{ g.id }})" class="delete-btn">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add Guard Modal -->
+            <div id="guardModal" class="hidden fixed inset-0 z-[1000] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6">
+                <div class="glass-card p-8 w-full max-w-md border-purple-500/30">
+                    <h3 class="text-2xl font-bold mb-6">Register New Guard</h3>
+                    <div class="space-y-4">
+                        <input type="text" id="gName" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl outline-none focus:border-purple-500">
+                        <input type="email" id="gEmail" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl outline-none focus:border-purple-500">
+                        <input type="text" id="gPass" placeholder="Password" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl outline-none focus:border-purple-500">
+                        <select id="gArea" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl outline-none focus:border-purple-500 text-white">
+                            <option value="" disabled selected class="bg-slate-900">Select Assigned Area</option>
+                            {% for key, loc in locations.items() %}
+                            <option value="{{ key }}" class="bg-slate-900">{{ loc.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <select id="gShift" class="w-full bg-white/5 border border-white/10 p-3 rounded-xl outline-none focus:border-purple-500 text-white">
+                            <option value="" disabled selected class="bg-slate-900">Select Shift</option>
+                            <option value="Morning Shift" class="bg-slate-900">Morning Shift (06:00 - 18:00)</option>
+                            <option value="Night Shift" class="bg-slate-900">Night Shift (18:00 - 06:00)</option>
+                        </select>
+                        <div class="flex gap-4 pt-4">
+                            <button onclick="toggleGuardModal()" class="flex-1 py-3 rounded-xl font-bold bg-white/5 hover:bg-white/10 transition-all">CANCEL</button>
+                            <button onclick="submitGuard()" class="flex-1 py-3 rounded-xl font-bold bg-purple-600 hover:bg-purple-700 transition-all">CREATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML Retrain Section -->
+            <div id="sec-ml" class="tab-sec hidden">
+                <div class="section-title"><span>🧠</span> ML Engine Calibration</div>
+                <div class="max-w-xl mx-auto mt-20 text-center">
+                    <div class="text-5xl mb-6">🛸</div>
+                    <h3 class="text-2xl font-bold mb-4">Retrain ML Neural Engine</h3>
+                    <p class="text-muted text-sm mb-8 leading-relaxed">Upload a fresh Nanded Parking dataset (CSV) to calibrate the predictive model. This will update accuracy based on new city traffic patterns.</p>
+                    
+                    <label class="w-full border-2 border-dashed border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 rounded-3xl p-12 flex flex-col items-center cursor-pointer transition-all">
+                        <input type="file" id="csvIn" class="hidden" accept=".csv" onchange="handleCsvUpload(this)">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-2xl">⬆️</span>
+                        </div>
+                        <span id="csvStatus" class="font-bold text-purple-300">SELECT CSV FILE</span>
+                        <span class="text-[10px] text-muted mt-2 uppercase tracking-widest">Supports .csv datasets</span>
+                    </label>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function showTab(tab) {
+            // Hide sections
+            document.querySelectorAll('.tab-sec').forEach(s => s.classList.add('hidden'));
+            // Remove active class from buttons
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+
+            // Show selected
+            document.getElementById('sec-' + tab).classList.remove('hidden');
+            document.getElementById('btn-' + tab).classList.add('active');
+        }
+
+        async function deleteItem(type, id) {
+            if(!confirm(`SYSTEM ALERT: Permanent deletion of ${type} #${id}?`)) return;
+            
+            try {
+                const res = await fetch(`/admin/delete-${type}/${id}`, { method: 'POST' });
+                const data = await res.json();
+                if(data.success) {
+                    const el = document.getElementById(`${type}-${id}`);
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateX(20px)';
+                    el.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                    setTimeout(() => el.remove(), 400);
+                }
+            } catch(err) {
+                alert("CORE ERROR: Deletion sequence failed.");
+            }
+        }
+
+        async function handleCsvUpload(input) {
+            if(!input.files[0]) return;
+            const formData = new FormData();
+            formData.append('file', input.files[0]);
+
+            const status = document.getElementById('csvStatus');
+            status.textContent = "UPLOADING & RETRAINING...";
+
+            try {
+                const res = await fetch('/upload-csv', { method: 'POST', body: formData });
+                const data = await res.json();
+                if(data.success) {
+                    status.innerHTML = `<span class="text-green-400">TRAINING COMPLETE! (Acc: ${data.accuracy}%)</span>`;
+                    setTimeout(() => location.reload(), 2000);
+                } else { 
+                    status.innerHTML = `<span class="text-red-400">ERROR: ${data.message}</span>`;
+                }
+            } catch(e) { 
+                status.innerHTML = `<span class="text-red-400">NETWORK ERROR</span>`;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('adminAuth');
+            window.location.href = "/admin-login-page";
+        }
+
+        function toggleGuardModal() {
+            document.getElementById('guardModal').classList.toggle('hidden');
+        }
+
+        async function submitGuard() {
+            const name = document.getElementById('gName').value;
+            const email = document.getElementById('gEmail').value;
+            const password = document.getElementById('gPass').value;
+            const area = document.getElementById('gArea').value;
+            const shift = document.getElementById('gShift').value;
+
+            if(!name || !email || !password || !area || !shift) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            try {
+                const res = await fetch('/admin/add-guard', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password, area, shift })
+                });
+                const data = await res.json();
+                if(data.success) {
+                    location.reload();
+                } else {
+                    alert("Error: " + data.message);
+                }
+            } catch(e) {
+                alert("Server error.");
+            }
+        }
+
+        async function verifyPayment(id, status) {
+            try {
+                const res = await fetch(`/admin/verify-payment/${id}/${status}`, { method: 'POST' });
+                const data = await res.json();
+                if(data.success) {
+                    location.reload();
+                }
+            } catch(e) { alert("Verification failed."); }
+        }
+
+        // Initialize Analytics Chart
+        window.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('earningsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Earnings (₹)',
+                        data: [120, 450, 320, 800, 560, 950, {{ earnings }}],
+                        borderColor: '#a855f7',
+                        backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+            
+            // Show Analytics by default
+            showTab('analytics');
+        });
+    </script>
+</body>
+</html>
