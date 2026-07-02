@@ -93,6 +93,10 @@ The system uses Machine Learning techniques to predict parking availability base
 
 ---
 
+🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repo, raise issues, or submit pull requests to improve the project.
+
 ## 👩‍💻 Author
 
 **Aishwarya Godre**
